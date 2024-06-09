@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
     <h1>Arun Boddapati</h1>
     <p>Bioinformatics Scientist | Machine Learning Expert | Pipeline Developer</p>
     <p><a href="mailto:arunbodd@icloud.com">arunbodd@icloud.com</a> | <a href="https://www.linkedin.com/in/arunbodd/">LinkedIn</a> | Atlanta, Georgia</p>
@@ -91,33 +92,40 @@
 
     <div id="Publications" class="tabcontent">
         <h2>Publications</h2>
-        <div class="publication">
-            <img src="images/Baricitinib_fig4.jpg" alt="Baricitinib treatment resolves lower-airway macrophage inflammation and neutrophil recruitment in SARS-CoV-2-infected rhesus macaques" onclick="showDetails('pub1')">
-            <div class="details" id="pub1">
-                <h3><a href="https://doi.org/10.1016/j.cell.2020.11.007" target="_blank">Baricitinib treatment resolves lower-airway macrophage inflammation and neutrophil recruitment in SARS-CoV-2-infected rhesus macaques</a></h3>
-                <p><strong>Abstract:</strong> SARS-CoV-2-induced hypercytokinemia and inflammation are critically associated with COVID-19 severity. Baricitinib, a clinically approved JAK1/JAK2 inhibitor, is currently being investigated in COVID-19 clinical trials. Here, we investigated the immunologic and virologic efficacy of baricitinib in a rhesus macaque model of SARS-CoV-2 infection. Viral shedding measured from nasal and throat swabs, bronchoalveolar lavages, and tissues was not reduced with baricitinib. Type I interferon (IFN) antiviral responses and SARS-CoV-2-specific T cell responses remained similar between the two groups. Animals treated with baricitinib showed reduced inflammation, decreased lung infiltration of inflammatory cells, reduced NETosis activity, and more limited lung pathology. Importantly, baricitinib-treated animals had a rapid and remarkably potent suppression of lung macrophage production of cytokines and chemokines responsible for inflammation and neutrophil recruitment. These data support a beneficial role for, and elucidate the immunological mechanisms underlying, the use of baricitinib as a frontline treatment for inflammation induced by SARS-CoV-2 infection.</p>
-                <p><strong>Main Contributions:</strong></p>
-                <ul>
-                    <li>Reduction in Inflammatory Cytokine Expression: Baricitinib treatment significantly reduces the expression of inflammatory cytokines (e.g., IL-6, TNF-a) in pulmonary macrophages.</li>
-                    <li>Altered Chemokine Profiles: The treatment impacts the expression of chemokines involved in neutrophil and macrophage recruitment.</li>
-                    <li>Visualization of Cellular Changes: UMAP projections and heatmaps provide a visual representation of the changes in cellular composition and gene expression due to baricitinib treatment.</li>
-                    <li>Preservation of Interferon Responses: Despite the reduction in inflammatory chemokines, ISG expression remains largely unaffected by baricitinib.</li>
-                    <li>Support for Therapeutic Impact: These detailed analyses support the conclusion that baricitinib reduces airway inflammation while maintaining antiviral immune responses.</li>
-                </ul>
+        <div class="publication-container"> <!-- Added this div -->
+            <div class="publication">
+                <img src="images/Baricitinib_fig4.jpg" alt="Baricitinib treatment" onclick="showDetails('pub1')">
+                <div class="details" id="pub1">
+                    <h3><a href="https://doi.org/10.1016/j.cell.2020.11.007" target="_blank">Baricitinib treatment resolves lower-airway macrophage inflammation and neutrophil recruitment in SARS-CoV-2-infected rhesus macaques</a></h3>
+                    <p><strong>Abstract:</strong> SARS-CoV-2-induced hypercytokinemia and inflammation are critically associated with COVID-19 severity. Baricitinib, a clinically approved JAK1/JAK2 inhibitor, is currently being investigated in COVID-19 clinical trials. Here, we investigated the immunologic and virologic efficacy of baricitinib in a rhesus macaque model of SARS-CoV-2 infection. Viral shedding measured from nasal and throat swabs, bronchoalveolar lavages, and tissues was not reduced with baricitinib. Type I interferon (IFN) antiviral responses and SARS-CoV-2-specific T cell responses remained similar between the two groups. Animals treated with baricitinib showed reduced inflammation, decreased lung infiltration of inflammatory cells, reduced NETosis activity, and more limited lung pathology. Importantly, baricitinib-treated animals had a rapid and remarkably potent suppression of lung macrophage production of cytokines and chemokines responsible for inflammation and neutrophil recruitment. These data support a beneficial role for, and elucidate the immunological mechanisms underlying, the use of baricitinib as a frontline treatment for inflammation induced by SARS-CoV-2 infection.</p>
+                    <p><strong>Main Contributions:</strong></p>
+                    <ul>
+                        <li>Reduction in Inflammatory Cytokine Expression: Baricitinib treatment significantly reduces the expression of inflammatory cytokines (e.g., IL-6, TNF-a) in pulmonary macrophages.</li>
+                        <li>Altered Chemokine Profiles: The treatment impacts the expression of chemokines involved in neutrophil and macrophage recruitment.</li>
+                        <li>Visualization of Cellular Changes: UMAP projections and heatmaps provide a visual representation of the changes in cellular composition and gene expression due to baricitinib treatment.</li>
+                        <li>Preservation of Interferon Responses: Despite the reduction in inflammatory chemokines, ISG expression remains largely unaffected by baricitinib.</li>
+                        <li>Support for Therapeutic Impact: These detailed analyses support the conclusion that baricitinib reduces airway inflammation while maintaining antiviral immune responses.</li>
+                    </ul>
+                </div>
             </div>
+            <div class="publication">
+                <img src="images/MVA_S_vaccine.jpg" alt="MVA/S Vaccine" onclick="showDetails('pub2')">
+                <div class="details" id="pub2">
+                    <h3><a href="https://doi.org/10.1016/j.immuni.2021.02.001" target="_blank">A modified vaccinia Ankara vector-based vaccine protects macaques from SARS-CoV-2 infection, immune pathology, and dysfunction in the lungs</a></h3>
+                    <p><strong>Abstract:</strong> Modified vaccinia Ankara (MVA) vector-based vaccines are attractive because of their excellent safety and ability to induce long-lived humoral and cellular immunity in humans. Routhu et al. show that an MVA-based COVID-19 vaccine encoding prefusion-stabilized spike (MVA/S) induces strong neutralizing antibody and CD8+ T cell responses and protects macaques from SARS-CoV2 infection, immunopathology, and infection-induced B cell abnormalities in the lungs.</p>
+                    <p><strong>Main Contributions:</strong></p>
+                    <ul>
+                        <li><strong>Development of MVA-Based Vaccine:</strong> The study developed an MVA-based vaccine encoding a prefusion-stabilized spike protein (MVA/S) and demonstrated its efficacy in inducing strong neutralizing antibody and CD8+ T cell responses.</li>
+                        <li><strong>Cell Composition:</strong> The majority of cells in the BAL fluid were CD68+ myeloid cells (82% in controls and 71% in vaccinated animals), followed by CD8+ T cells (7% in controls and 14% in vaccinated animals), with minor populations of B cells, dendritic cells (DCs), and epithelial cells.</li>
+                        <li><strong>Single-Cell RNA Sequencing:</strong> The use of single-cell RNA sequencing to analyze the cellular response in the BAL fluid provided detailed insights into the immune mechanisms involved and the reduction of inflammatory responses due to vaccination.</li>
+                        <li><strong>Durable Immune Response:</strong> The vaccine induced strong neutralizing antibodies and CD8+ T cell responses that were maintained over time, suggesting long-term protection potential.</li>
+                        <li><strong>Gene Expression:</strong> In control animals, there was widespread induction of IFN-stimulated genes (ISGs) and inflammatory cytokines (e.g., IL-6, TNF-α, IL-1β) as well as chemokines (e.g., CXCL8, CXCL10). In vaccinated animals, the expression of these genes was significantly reduced.</li>
+                        <li><strong>Potential for Human Use:</strong> The study supports the potential of the MVA/S vaccine as a candidate for human use, with the ability to induce durable immune responses and protection against SARS-CoV-2.</li>
+                    </ul>
+                </div>
+            </div>            
         </div>
-    </div>
-        </div>
-        <div class="publication">
-            <img src="path/to/your/image2.jpg" alt="Publication Image 2" onclick="showDetails('pub2')">
-            <div class="details" id="pub2">
-                <h3>Publication Title 2</h3>
-                <p>Abstract: ...</p>
-                <p>Main Contributions: ...</p>
-            </div>
-        </div>
-        <!-- Add more publications as needed -->
-    </div>
+    </div>    
 
     <script src="script.js"></script>
 </body>

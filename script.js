@@ -1,3 +1,8 @@
+// Dark mode toggle
+document.getElementById('darkModeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+
 // Collapsible sections
 var coll = document.getElementsByClassName("collapsible");
 for (var i = 0; i < coll.length; i++) {
@@ -47,4 +52,3 @@ function openTab(evt, tabName) {
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".tablinks").click();
 });
-
