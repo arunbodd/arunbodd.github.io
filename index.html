@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun Boddapati - Resume</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arun Boddapati - Resume</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="dark-mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
     <h1>Arun Boddapati</h1>
     <p>Bioinformatics Scientist | Machine Learning Expert | Pipeline Developer</p>
     <p><a href="mailto:arunbodd@icloud.com">arunbodd@icloud.com</a> | <a href="https://www.linkedin.com/in/arunbodd/">LinkedIn</a> | Atlanta, Georgia</p>
@@ -21,7 +26,7 @@
     <!-- Tab content -->
     <div id="Resume" class="tabcontent">
         <h2>Resume</h2>
-        <button class="collapsible">Summary</button>
+        <button class="collapsible">About Me</button>
         <div class="content">
             <p>As a versatile full-stack bioinformatics scientist, I thrive in collaborative environments, having worked seamlessly across diverse teams ranging from Genomics Core to Scientific Computing. My commitment to meeting client expectations has been a cornerstone of my success, as evidenced by my track record of delivering high-quality results in alignment with client needs. With expertise spanning NGS data analysis, pipeline development, machine learning, and tool development, I bring a holistic approach to problem-solving. Through effective project management, team building, and mentoring, I drive initiatives that not only meet but exceed customer expectations, while advancing the forefront of data science and biomedical research.</p>
         </div>
@@ -30,7 +35,6 @@
         <div class="content">
             <h3>M.S. in Bioinformatics</h3>
             <p>Indiana University-Purdue University (IUPUI), 2016 - 2018, Indianapolis, Indiana</p>
-            <p>Worked as Graduate research assistant on epigenetic, RNA methylation and RNA structural motifs. Volunteered for RRM-Rustbelt'17 conference and conducted workshops for summer students.</p>
             <h3>M.S in Biomedical Science</h3>
             <p>Symbiosis School of Biological Sciences, 2012 - 2014, Pune, India</p>
             <h3>Bachelors in Biotechnology</h3>
@@ -43,9 +47,9 @@
             <p>Leidos, 06/2022 - Present, Atlanta, Georgia</p>
             <ul>
                 <li>Developed the National Wastewater Surveillance (NWSS) pipeline (Aquascope), significantly reducing analysis time by 80%, thereby improving the efficiency of wastewater monitoring efforts.</li>
-                <li>Mentored a junior bioinformatician at CDC, providing guidance and support on various collaborative projects to ensure their professional development and project success.</li>
-                <li>Led a project investigating the impact of gene expression in patients exposed to Silica dust, utilizing machine learning and generative learning models to uncover insights. Also, mentored a summer intern and presented a paper at AMD Day'23.</li>
-                <li>Served as the training lead for Nextflow, Singularity, High-Performance Computing, and Transcriptomics data analysis, equipping team members with essential skills to enhance project efficiency and effectiveness.</li>
+                <li>Mentored a junior bioinformatician at CDC, providing guidance and support on various collaborative projects to ensure their professional development and project success </li>
+                <li>Led a project investigating the impact of gene expression in patients exposed to Silica dust, utilizing machine learning and generative learning models to uncover insights. Also, mentored a summer intern and presented a paper at AMD Day'23</li>
+                <li>Served as the training lead for Nextflow, Singularity, High-Performance Computing, and Transcriptomics data analysis, equipping team members with essential skills to enhance project efficiency and effectiveness</li>
             </ul>
             <h3>Sr. Bioinformatics Analyst</h3>
             <p>Emory Primate Research Center, 09/2020 - 06/2022, Atlanta, Georgia</p>
@@ -65,16 +69,16 @@
 
         <button class="collapsible">Skills</button>
         <div class="content">
-            <p>Management Skills: Project management, Team building, Quality management, Mentorship, Scrum, Confluence/Kanban</p>
-            <p>Bioinformatics: NGS Analysis, Tool development, Training/Teaching, Nextflow, Snakemake, Github, CI/CD integration, Mkdocs, Data viz, Data mining</p>
-            <p>Programming/Scripting: R/Rshiny/Quarto, Python/PyTorch, Shell, HTML, CSS</p>
-            <p>High performance & Cloud Computing: Singularity, Docker, AWS, Azure</p>
-            <p>Machine Learning/AI: TensorFlow, Regression, Classification, Generative neural nets, NLP, Large language model: GPT/Llama2/privateGPT</p>
+            <p><Strong>Management Skills</strong>: Project management, Team building, Quality management, Mentorship, Scrum, Jira</p>
+            <p><Strong>Bioinformatics & Biomedical Sciences</Strong>: NGS Analysis, Infectious diseases, Immunology, Repertoire sequencing, Epidemiology, Nextflow, Snakemake, CI/CD Github, Single-cell, Cite-seq</p>
+            <p><Strong>Programming/Scripting:</Strong> R/Rshiny/Quarto, Python/PyTorch, Shell, HTML, CSS</p>
+            <p><Strong>High performance & Cloud Computing</Strong>: Singularity, Docker, AWS, Azure</p>
+            <p><Strong>Machine Learning</Strong>: TensorFlow, Regression, Classification, Generative neural nets, NLP</p>
         </div>
 
         <button class="collapsible">Strengths</button>
         <div class="content">
-            <p>Problem Solving, Project Management, Mentoring, Teamwork</p>
+            <p>Curiosity, Initiative, Problem solving, Project management, Team collaboration, Adaptibility, Time & Resource management, Leadership, Mentoring, Client relations, Conflict resolution, Strategic planning, Project planning</p>
         </div>
 
         <button class="collapsible">Passions</button>
@@ -123,7 +127,45 @@
                         <li><strong>Potential for Human Use:</strong> The study supports the potential of the MVA/S vaccine as a candidate for human use, with the ability to induce durable immune responses and protection against SARS-CoV-2.</li>
                     </ul>
                 </div>
-            </div>            
+            </div>
+            <div class="publication">
+                <img src="images/AtypicalB_cells.jpeg" alt="Shared Transcriptional Profiles" onclick="showDetails('pub3')">
+                <div class="details" id="pub3">
+                    <h3><a href="https://www.science.org/doi/10.1126/sciadv.abg8384" target="_blank">Shared transcriptional profiles of atypical B cells suggest common drivers of expansion and function in malaria, HIV, and autoimmunity</a></h3>
+                    <p><strong>Abstract:</strong> Chronic infectious diseases have a substantial impact on the human B cell compartment including a notable
+                        expansion of B cells here termed atypical B cells (ABCs). Using unbiased single-cell RNA sequencing (scRNA-seq),
+                        we uncovered and characterized heterogeneities in naïve B cell, classical memory B cells, and ABC subsets. We
+                        showed remarkably similar transcriptional profiles for ABC clusters in malaria, HIV, and autoimmune diseases and
+                        demonstrated that interferon- drove the expansion of ABCs in malaria. These observations suggest that ABCs
+                        represent a separate B cell lineage with a common inducer that further diversifies and acquires disease-specific
+                        characteristics and functions. In malaria, we identified ABC subsets based on isotype expression that differed in
+                        expansion in African children and in B cell receptor repertoire characteristics. Of particular interest, IgD+IgMlo and
+                        IgD−IgG+ ABCs acquired a high antigen affinity threshold for activation, suggesting that ABCs may limit autoimmune
+                        responses to low-affinity self-antigens in chronic malaria</p>
+                    <p><strong>Main Contributions:</strong></p>
+                    <ul>
+                        <li><strong>Gene Expression Distribution (Panel A):</strong> ABCs display a unique transcriptional signature with 176 differentially expressed genes (DEGs), including a variety of functional proteins such as cell surface markers, cytokines, transcription factors, adhesion molecules, cytoskeleton regulators, signaling molecules, and metabolism-related proteins.</li>
+                        <li><strong>Heatmap of DEGs (Panel B):</strong> The DEGs in ABCs compared to naïve B cells, cMBCs, and acMBCs show that cell surface markers such as FCRL5, LILRB2 (CD85D), ITGAX (CD11c), and CD72 are highly expressed in ABCs. Additionally, TFs like TBX21 (Tbet) and new ones like ZBTB32, NR4A2, TOX2, and TCF7 are differentially expressed in ABCs, along with cytokines and signaling molecules being part of the unique signature of ABCs.</li>
+                        <li><strong>Validation of DEGs (Panel C):</strong> Flow cytometry confirms the expression of several DEGs identified in ABCs including CD72, CD79A, integrin β-2 (ITGB2), CD55 (down-regulated in ABCs), CD63, and CD84. High expression of CD79A suggests a distinctive B cell receptor (BCR) complex structure in ABCs.</li>
+                        <li><strong>IL-10 Expression (Panel D):</strong> ABCs express higher levels of IL-10 mRNA and surface IL-10 receptor (IL10R) compared to naïve B cells and cMBCs, suggesting a role for ABCs in controlling inflammatory responses during febrile malaria.</li>
+                        <li><strong>Transcription Factors (Panel E):</strong> Flow cytometry validates the up-regulation of ZBTB32, NR4A2, and TOX2, and down-regulation of TCF7 in ABCs. These TFs are associated with T cell exhaustion features, although ABCs are not functionally exhausted.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publication">
+                <img src="images/TIGIT_CD8.jpg" alt="MVA/S Vaccine" onclick="showDetails('pub4')">
+                <div class="details" id="pub4">
+                    <h3><a href="https://academic.oup.com/jid/article/224/9/1599/6179305" target="_blank">Correlation Between TIGIT Expression on CD8+ T Cells and Higher Cytotoxic Capacity</a></h3>
+                    <p><strong>Abstract:</strong> Persistent exposure to antigen leads to T-cell exhaustion and immunologic dysfunction. We examined the immune exhaustion markers T cell immunoglobulin and ITIM domain (TIGIT) and programmed cell death protein 1 (PD-1) in human immunodeficiency virus (HIV)–infected and healthy individuals and the relationship with cytotoxic CD8+ T-lymphocyte activity. Frequencies of TIGIT but not PD-1 were positively correlated with CD8+ T-lymphocyte activity in HIV-aviremic and healthy individuals; however, there was no correlation in HIV-viremic individuals. Transcriptome analyses revealed up-regulation of genes associated with antiviral immunity in TIGIT+CD8+ versus TIGIT−CD8+ T cells. Our data suggest that TIGIT+CD8+ T cells do not necessarily represent a state of immune exhaustion and maintain an intrinsic cytotoxicity in HIV-infected individuals.</p>
+                    <p><strong>Main Contributions:</strong></p>
+                    <ul>
+                        <li><strong>Distinct Transcriptional Profiles:</strong> The study identified distinct transcriptional profiles between TIGIT+ and TIGIT− CD8+ T cells, highlighting the difference in gene expression patterns which are more similar between HIV-aviremic and healthy individuals than with HIV-viremic individuals.</li>
+                        <li><strong>Gene Ontology Analysis:</strong> The study revealed that genes associated with defense response, innate immune response, cell activation, positive regulation of cytokine production, and immune effector processes were enriched in TIGIT+CD8+ T cells.</li>
+                        <li><strong>Differential Gene Expression:</strong> The study demonstrated that certain cytotoxic molecules and transcription factors (such as granzyme A, H, K, and transcription factors Eomesodermin and TOX) were up-regulated in TIGIT+CD8+ T cells, indicating an intrinsic capacity for cytotoxicity despite the expression of inhibitory receptors.</li>
+                        <li><strong>Inhibitory Receptor Expression:</strong> The study found that the expression of multiple inhibitory receptors (including PD-1, CTLA-4, CD160, and CD244) was up-regulated in TIGIT+CD8+ T cells, particularly in HIV-viremic individuals, suggesting that these cells might be contributing to the impairment of CTL functions during active viral replication.</li>
+                    </ul>
+                </div>
+            </div>             
         </div>
     </div>    
 
