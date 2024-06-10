@@ -108,17 +108,6 @@ h1, h2 {
     display: block;
 }
 
-.publication h4 {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #333; /* Adjust color as needed */
-}
-
-.publication p {
-    font-size: 14px;
-    color: #666; /* Adjust color as needed */
-}
-
 a {
     color: #FF6347; /* Blue color for hyperlinks */
     text-decoration: none; /* Remove underline */
