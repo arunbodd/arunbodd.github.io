@@ -1,68 +1,72 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Lucida Console", Monospace;
     text-align: center;
-    margin: 50px;
+    margin: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.circular-image {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 10; /* Optional: Adjust the margin as needed */
+    float: center
 }
 
 h1, h2 {
-    color: #333;
+    color: rgb(0, 0, 0);
+    font-size: 30px; 
+}
+
+.heading-colored {
+    color: #FF6347; /* Replace with your desired color code */
 }
 
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border-bottom: 1px solid #3a3939;
+    background-color: rgb(69, 70, 71)
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-    background-color: Firefox 1;
-    float: left;
+    background-color: hsla(10, 70%, 70%, 10);
+    float: center;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    background-color: #555;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: rgb(20, 186, 26);
 }
 
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    margin-bottom: 10px;
+    padding: 6px 8px;
+    border: 2px solid rgb(37, 37, 132);
+    border-top: 0.2rem solid;
 }
 
 .content {
     padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
+    display: block;
+    overflow: visible;
+    font-size: 20px;
+    text-align: justify;
 }
 
 /* Container for publications */
@@ -70,19 +74,19 @@ h1, h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 }
 
 .publication {
     display: inline-block;
     margin: 20px;
     position: relative;
-    max-width: 400px;
+    max-width: 200px;
 }
 
 .publication img {
     width: 100%;
-    height: auto;
+    height: 250px;
     cursor: pointer;
 }
 
@@ -93,21 +97,35 @@ h1, h2 {
     left: 50%;
     transform: translateX(-50%);
     width: 600px;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: rgb(236, 242, 239);
+    border: 1px solid rgb(19, 43, 222);
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
     z-index: 10; /* Ensures the details box is on top */
+}
+.publication:hover .details {
+    display: block;
+}
+
+.publication h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333; /* Adjust color as needed */
+}
+
+.publication p {
+    font-size: 14px;
+    color: #666; /* Adjust color as needed */
 }
 
 a {
-    color: #007bff; /* Blue color for hyperlinks */
+    color: #FF6347; /* Blue color for hyperlinks */
     text-decoration: none; /* Remove underline */
 }
 
 a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #0e77e0; /* Darker blue on hover */
     text-decoration: underline; /* Underline on hover */
 }
 
@@ -121,7 +139,6 @@ a:hover {
 }
 
 .dark-mode .tab {
-    background-color: #333;
     border-bottom: 1px solid #444;
 }
 
@@ -134,15 +151,11 @@ a:hover {
 }
 
 .dark-mode .tab button:hover {
-    background-color: #444;
+    background-color: rgb(20, 186, 26);
 }
 
 .dark-mode .collapsible {
     background-color: #444;
-}
-
-.dark-mode .content {
-    background-color: #333;
 }
 
 .dark-mode .details {
@@ -155,7 +168,7 @@ a:hover {
 .dark-mode-toggle {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 30px;
 }
 
 /* Switch */

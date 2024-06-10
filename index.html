@@ -13,52 +13,56 @@
                 <span class="slider round"></span>
             </label>
         </div>
+    <img src="images/profilepicture.jpg" alt="Your Image" class="circular-image">
     <h1>Arun Boddapati</h1>
     <p>Bioinformatics Scientist | Machine Learning Expert | Pipeline Developer</p>
     <p><a href="mailto:arunbodd@icloud.com">arunbodd@icloud.com</a> | <a href="https://www.linkedin.com/in/arunbodd/">LinkedIn</a> | Atlanta, Georgia</p>
 
     <!-- Tab links -->
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
+        <button class="tablinks" onclick="openTab(event, 'AboutMe')">AboutMe</button>
+        <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+        <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+        <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+        <button class="tablinks" onclick="openTab(event, 'Strengths')">Strengths</button>
+        <button class="tablinks" onclick="openTab(event, 'Find Me Online')">Find Me Online</button>
         <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
     </div>
 
     <!-- Tab content -->
-    <div id="Resume" class="tabcontent">
-        <h2>Resume</h2>
-        <button class="collapsible">About Me</button>
+    <div id="AboutMe" class="tabcontent">
         <div class="content">
-            <p>As a versatile full-stack bioinformatics scientist, I thrive in collaborative environments, having worked seamlessly across diverse teams ranging from Genomics Core to Scientific Computing. My commitment to meeting client expectations has been a cornerstone of my success, as evidenced by my track record of delivering high-quality results in alignment with client needs. With expertise spanning NGS data analysis, pipeline development, machine learning, and tool development, I bring a holistic approach to problem-solving. Through effective project management, team building, and mentoring, I drive initiatives that not only meet but exceed customer expectations, while advancing the forefront of data science and biomedical research.</p>
+            <p>As a versatile full-stack bioinformatics scientist, I thrive in collaborative environments, having worked seamlessly across diverse teams ranging from Genomics Core to Scientific Computing. My commitment to meeting collaborators expectations has been a cornerstone of my success, as evidenced by my track record of delivering high-quality results in alignment with their needs. With expertise spanning NGS data analysis, pipeline development, machine learning, and tool development, I adopt a comprehensive approach to multi-omics data. Through effective project management, team building, and mentoring, I drive initiatives that not only meet but exceed expectations, while advancing the forefront of data science and biomedical research.</p>
         </div>
-
-        <button class="collapsible">Education</button>
+    </div>
+    <div id="Education" class="tabcontent">
         <div class="content">
-            <h3>M.S. in Bioinformatics</h3>
+            <h3 class="heading-colored">M.S. in Bioinformatics</h3>
             <p>Indiana University-Purdue University (IUPUI), 2016 - 2018, Indianapolis, Indiana</p>
-            <h3>M.S in Biomedical Science</h3>
+            <h3 class="heading-colored">M.S in Biomedical Science</h3>
             <p>Symbiosis School of Biological Sciences, 2012 - 2014, Pune, India</p>
-            <h3>Bachelors in Biotechnology</h3>
+            <h3 class="heading-colored">Bachelors in Biotechnology</h3>
             <p>Sreenidhi Institute of Science and Technology, 09/2007 - 07/2011, Hyderabad, India</p>
         </div>
-
-        <button class="collapsible">Experience</button>
+    </div>
+    <div id="Experience" class="tabcontent">
         <div class="content">
-            <h3>Bioinformatics Scientist</h3>
+            <h3 class="heading-colored">Bioinformatics Scientist</h3>
             <p>Leidos, 06/2022 - Present, Atlanta, Georgia</p>
             <ul>
-                <li>Developed the National Wastewater Surveillance (NWSS) pipeline (Aquascope), significantly reducing analysis time by 80%, thereby improving the efficiency of wastewater monitoring efforts.</li>
-                <li>Mentored a junior bioinformatician at CDC, providing guidance and support on various collaborative projects to ensure their professional development and project success </li>
-                <li>Led a project investigating the impact of gene expression in patients exposed to Silica dust, utilizing machine learning and generative learning models to uncover insights. Also, mentored a summer intern and presented a paper at AMD Day'23</li>
-                <li>Served as the training lead for Nextflow, Singularity, High-Performance Computing, and Transcriptomics data analysis, equipping team members with essential skills to enhance project efficiency and effectiveness</li>
+                <li>Developed the National Wastewater Surveillance (NWSS) pipeline (Aquascope) in nextflow, significantly reducing analysis time by 80%, thereby improving the efficiency of wastewater monitoring efforts.</li>
+                <li>Mentored a junior bioinformatician at CDC, providing guidance and support on various collaborative projects to ensure their professional development and project success.</li>
+                <li>Led a project investigating the impact of gene expression in patients exposed to Silica dust, utilizing machine learning and generative learning models to uncover insights. Also, mentored a summer intern and presented a paper at AMD Day'23.</li>
+                <li>Served as the training lead for Nextflow, Singularity, High-Performance Computing, and Transcriptomics data analysis, equipping team members with essential skills to enhance project efficiency and effectiveness.</li>
             </ul>
-            <h3>Sr. Bioinformatics Analyst</h3>
+            <h3 class="heading-colored">Sr. Bioinformatics Analyst</h3>
             <p>Emory Primate Research Center, 09/2020 - 06/2022, Atlanta, Georgia</p>
             <ul>
                 <li>Led the analysis for the Wastewater assessment of COVID-19 samples collected from wastewater plants in Atlanta, GA, contributing to vital insights into community transmission patterns.</li>
                 <li>As lead analyst, developed analysis pipelines for the IMPACC study at Emory, overseeing analysis of data from 5000 COVID-19 patients, resulting in three impactful publications in leading journals.</li>
                 <li>Spearheaded the development of RNA-Seq and Single-Cell RNA-Seq pipelines, leading to the publication of four high-impact articles, while also providing training in single-cell RNA data analysis and bioinformatics tools to graduate students and staff scientists.</li>
             </ul>
-            <h3>Bioinformatics Analyst II</h3>
+            <h3 class="heading-colored">Bioinformatics Analyst II</h3>
             <p>Leidos Biomedical Research, 04/2018 - 09/2020, Bethesda, Maryland</p>
             <ul>
                 <li>Performed comprehensive preliminary and exploratory data analysis for gene expression studies across various NIAID projects, leveraging Microarray, RNA-Seq, and Single Cell RNA sequencing data to uncover new leads and insights.</li>
@@ -66,54 +70,54 @@
                 <li>Streamlined bioinformatics workflows by developing pipelines for next-generation sequencing data analysis, resulting in significant time and cost savings, including quicker project turnaround times and reduced resource utilization.</li>
             </ul>
         </div>
-
-        <button class="collapsible">Skills</button>
+    </div>
+    <div id="Skills" class="tabcontent">
         <div class="content">
-            <p><Strong>Management Skills</strong>: Project management, Team building, Quality management, Mentorship, Scrum, Jira</p>
-            <p><Strong>Bioinformatics & Biomedical Sciences</Strong>: NGS Analysis, Infectious diseases, Immunology, Repertoire sequencing, Epidemiology, Nextflow, Snakemake, CI/CD Github, Single-cell, Cite-seq</p>
-            <p><Strong>Programming/Scripting:</Strong> R/Rshiny/Quarto, Python/PyTorch, Shell, HTML, CSS</p>
-            <p><Strong>High performance & Cloud Computing</Strong>: Singularity, Docker, AWS, Azure</p>
-            <p><Strong>Machine Learning</Strong>: TensorFlow, Regression, Classification, Generative neural nets, NLP</p>
-        </div>
-
-        <button class="collapsible">Strengths</button>
-        <div class="content">
-            <p>Curiosity, Initiative, Problem solving, Project management, Team collaboration, Adaptibility, Time & Resource management, Leadership, Mentoring, Client relations, Conflict resolution, Strategic planning, Project planning</p>
-        </div>
-
-        <button class="collapsible">Passions</button>
-        <div class="content">
-            <p>Tech enthusiast, Hiking aficionado, Soccer Buff</p>
-        </div>
-
-        <button class="collapsible">Find Me Online</button>
-        <div class="content">
-            <p>Google Scholar: <a href="https://scholar.google.com/citations?user=ni4A6KgAAAAJ&hl=en">Arun K. Boddapati</a></p>
-            <p>GitHub: <a href="https://github.com/arunbodd">arunbodd</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/arunbodd/">arunbodd</a></p>
+            <p><Strong class = "heading-colored">Management Skills</strong>: Project management, Team building, Quality management, Mentorship, Scrum, Jira</p>
+            <p><Strong class = "heading-colored">Bioinformatics & Biomedical Sciences</Strong>: NGS Analysis, Infectious diseases, Immunology, Repertoire sequencing, Epidemiology, Nextflow, Snakemake, CI/CD Github, Single-cell, Cite-seq</p>
+            <p><Strong class = "heading-colored">Programming/Scripting:</Strong> R/Rshiny/Quarto, Python/PyTorch, Shell, HTML, CSS</p>
+            <p><Strong class = "heading-colored">High performance & Cloud Computing</Strong>: Singularity, Docker, AWS, Azure</p>
+            <p><Strong class = "heading-colored">Machine Learning</Strong>: TensorFlow, Regression, Classification, Generative neural nets, NLP</p>
         </div>
     </div>
-
+    <div id="Strengths" class="tabcontent">
+        <div class="content">
+            <p>Curiosity</p>
+            <p>Initiative</p>Problem solving
+            <p>Project management</p>
+            <p>Team work</p>
+            <p>Adaptibility</p>
+            <p>Time & Resource management</p>
+            <p>Mentoring</p>
+            <p>Client relations</p>
+        </div>
+    </div>
+    <div id="Find Me Online" class="tabcontent">
+        <div class="content">
+            <p><strong class = "heading-colored"> Google Scholar: </strong><a href="https://scholar.google.com/citations?user=ni4A6KgAAAAJ&hl=en">Arun K. Boddapati</a></p>
+            <p><strong class = "heading-colored"> GitHub: </strong> <a href="https://github.com/arunbodd">arunbodd</a></p>
+            <p><strong class = "heading-colored"> Github.io: </strong> <a href="https://arunbodd.github.io">arunbodd</a></p>
+        </div>
+    </div>
     <div id="Publications" class="tabcontent">
-        <h2>Publications</h2>
         <div class="publication-container"> <!-- Added this div -->
             <div class="publication">
-                <img src="images/Baricitinib_fig4.jpg" alt="Baricitinib treatment" onclick="showDetails('pub1')">
+                <img src="images/Baricitinib_fig4.jpg" alt="Baricitinib treatment">
                 <div class="details" id="pub1">
                     <h3><a href="https://doi.org/10.1016/j.cell.2020.11.007" target="_blank">Baricitinib treatment resolves lower-airway macrophage inflammation and neutrophil recruitment in SARS-CoV-2-infected rhesus macaques</a></h3>
                     <p><strong>Abstract:</strong> SARS-CoV-2-induced hypercytokinemia and inflammation are critically associated with COVID-19 severity. Baricitinib, a clinically approved JAK1/JAK2 inhibitor, is currently being investigated in COVID-19 clinical trials. Here, we investigated the immunologic and virologic efficacy of baricitinib in a rhesus macaque model of SARS-CoV-2 infection. Viral shedding measured from nasal and throat swabs, bronchoalveolar lavages, and tissues was not reduced with baricitinib. Type I interferon (IFN) antiviral responses and SARS-CoV-2-specific T cell responses remained similar between the two groups. Animals treated with baricitinib showed reduced inflammation, decreased lung infiltration of inflammatory cells, reduced NETosis activity, and more limited lung pathology. Importantly, baricitinib-treated animals had a rapid and remarkably potent suppression of lung macrophage production of cytokines and chemokines responsible for inflammation and neutrophil recruitment. These data support a beneficial role for, and elucidate the immunological mechanisms underlying, the use of baricitinib as a frontline treatment for inflammation induced by SARS-CoV-2 infection.</p>
                     <p><strong>Main Contributions:</strong></p>
                     <ul>
-                        <li>Reduction in Inflammatory Cytokine Expression: Baricitinib treatment significantly reduces the expression of inflammatory cytokines (e.g., IL-6, TNF-a) in pulmonary macrophages.</li>
-                        <li>Altered Chemokine Profiles: The treatment impacts the expression of chemokines involved in neutrophil and macrophage recruitment.</li>
-                        <li>Visualization of Cellular Changes: UMAP projections and heatmaps provide a visual representation of the changes in cellular composition and gene expression due to baricitinib treatment.</li>
-                        <li>Preservation of Interferon Responses: Despite the reduction in inflammatory chemokines, ISG expression remains largely unaffected by baricitinib.</li>
-                        <li>Support for Therapeutic Impact: These detailed analyses support the conclusion that baricitinib reduces airway inflammation while maintaining antiviral immune responses.</li>
+                        <li><strong>Reduction in Inflammatory Cytokine Expression</strong>: Baricitinib treatment significantly reduces the expression of inflammatory cytokines (e.g., IL-6, TNF-a) in pulmonary macrophages</li>
+                        <li><strong>Altered Chemokine Profile</strong>: The treatment impacts the expression of chemokines involved in neutrophil and macrophage recruitment.</li>
+                        <li><strong>Visualization of Cellular Changes</strong>: UMAP projections and heatmaps provide a visual representation of the changes in cellular composition and gene expression due to baricitinib treatment.</li>
+                        <li><strong>Preservation of Interferon Responses</strong>: Despite the reduction in inflammatory chemokines, ISG expression remains largely unaffected by baricitinib.</li>
+                        <li><strong>Support for Therapeutic Impact</strong>: These detailed analyses support the conclusion that baricitinib reduces airway inflammation while maintaining antiviral immune responses.</li>
                     </ul>
                 </div>
             </div>
             <div class="publication">
-                <img src="images/MVA_S_vaccine.jpg" alt="MVA/S Vaccine" onclick="showDetails('pub2')">
+                <img src="images/MVA_S_vaccine.jpg" alt="MVA/S Vaccine">
                 <div class="details" id="pub2">
                     <h3><a href="https://doi.org/10.1016/j.immuni.2021.02.001" target="_blank">A modified vaccinia Ankara vector-based vaccine protects macaques from SARS-CoV-2 infection, immune pathology, and dysfunction in the lungs</a></h3>
                     <p><strong>Abstract:</strong> Modified vaccinia Ankara (MVA) vector-based vaccines are attractive because of their excellent safety and ability to induce long-lived humoral and cellular immunity in humans. Routhu et al. show that an MVA-based COVID-19 vaccine encoding prefusion-stabilized spike (MVA/S) induces strong neutralizing antibody and CD8+ T cell responses and protects macaques from SARS-CoV2 infection, immunopathology, and infection-induced B cell abnormalities in the lungs.</p>
@@ -129,7 +133,7 @@
                 </div>
             </div>
             <div class="publication">
-                <img src="images/AtypicalB_cells.jpeg" alt="Shared Transcriptional Profiles" onclick="showDetails('pub3')">
+                <img src="images/AtypicalB_cells.jpeg" alt="Shared Transcriptional Profiles">
                 <div class="details" id="pub3">
                     <h3><a href="https://www.science.org/doi/10.1126/sciadv.abg8384" target="_blank">Shared transcriptional profiles of atypical B cells suggest common drivers of expansion and function in malaria, HIV, and autoimmunity</a></h3>
                     <p><strong>Abstract:</strong> Chronic infectious diseases have a substantial impact on the human B cell compartment including a notable
@@ -146,14 +150,11 @@
                     <ul>
                         <li><strong>Gene Expression Distribution (Panel A):</strong> ABCs display a unique transcriptional signature with 176 differentially expressed genes (DEGs), including a variety of functional proteins such as cell surface markers, cytokines, transcription factors, adhesion molecules, cytoskeleton regulators, signaling molecules, and metabolism-related proteins.</li>
                         <li><strong>Heatmap of DEGs (Panel B):</strong> The DEGs in ABCs compared to naïve B cells, cMBCs, and acMBCs show that cell surface markers such as FCRL5, LILRB2 (CD85D), ITGAX (CD11c), and CD72 are highly expressed in ABCs. Additionally, TFs like TBX21 (Tbet) and new ones like ZBTB32, NR4A2, TOX2, and TCF7 are differentially expressed in ABCs, along with cytokines and signaling molecules being part of the unique signature of ABCs.</li>
-                        <li><strong>Validation of DEGs (Panel C):</strong> Flow cytometry confirms the expression of several DEGs identified in ABCs including CD72, CD79A, integrin β-2 (ITGB2), CD55 (down-regulated in ABCs), CD63, and CD84. High expression of CD79A suggests a distinctive B cell receptor (BCR) complex structure in ABCs.</li>
-                        <li><strong>IL-10 Expression (Panel D):</strong> ABCs express higher levels of IL-10 mRNA and surface IL-10 receptor (IL10R) compared to naïve B cells and cMBCs, suggesting a role for ABCs in controlling inflammatory responses during febrile malaria.</li>
-                        <li><strong>Transcription Factors (Panel E):</strong> Flow cytometry validates the up-regulation of ZBTB32, NR4A2, and TOX2, and down-regulation of TCF7 in ABCs. These TFs are associated with T cell exhaustion features, although ABCs are not functionally exhausted.</li>
                     </ul>
                 </div>
             </div>
             <div class="publication">
-                <img src="images/TIGIT_CD8.jpg" alt="MVA/S Vaccine" onclick="showDetails('pub4')">
+                <img src="images/TIGIT_CD8.jpg" alt="TIGIT_CD8">
                 <div class="details" id="pub4">
                     <h3><a href="https://academic.oup.com/jid/article/224/9/1599/6179305" target="_blank">Correlation Between TIGIT Expression on CD8+ T Cells and Higher Cytotoxic Capacity</a></h3>
                     <p><strong>Abstract:</strong> Persistent exposure to antigen leads to T-cell exhaustion and immunologic dysfunction. We examined the immune exhaustion markers T cell immunoglobulin and ITIM domain (TIGIT) and programmed cell death protein 1 (PD-1) in human immunodeficiency virus (HIV)–infected and healthy individuals and the relationship with cytotoxic CD8+ T-lymphocyte activity. Frequencies of TIGIT but not PD-1 were positively correlated with CD8+ T-lymphocyte activity in HIV-aviremic and healthy individuals; however, there was no correlation in HIV-viremic individuals. Transcriptome analyses revealed up-regulation of genes associated with antiviral immunity in TIGIT+CD8+ versus TIGIT−CD8+ T cells. Our data suggest that TIGIT+CD8+ T cells do not necessarily represent a state of immune exhaustion and maintain an intrinsic cytotoxicity in HIV-infected individuals.</p>
@@ -165,7 +166,18 @@
                         <li><strong>Inhibitory Receptor Expression:</strong> The study found that the expression of multiple inhibitory receptors (including PD-1, CTLA-4, CD160, and CD244) was up-regulated in TIGIT+CD8+ T cells, particularly in HIV-viremic individuals, suggesting that these cells might be contributing to the impairment of CTL functions during active viral replication.</li>
                     </ul>
                 </div>
-            </div>             
+            </div>
+            <div class="publication">
+                <img src="images/tautyping.jpeg" alt="Tau-typing">
+                <div class="details" id="pub5">
+                    <h3><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10336021/" target="_blank">Tau-typing: a Nextflow pipeline for finding the best phylogenetic markers in the genome for molecular typing of microbial species</a></h3>
+                    <p><strong>Abstract:</strong>Tau-typing is an integrated analysis pipeline for identifying genes or genomic segments whose phylogenetic resolving power most closely resembles the genome-wide resolving power of an input collection of genomes using the Kendall Tau rank correlation statistic. The pipeline is implemented in Nextflow and uses Docker and Singularity containers to ensure reliable scalability and reproducibility of results. This pipeline is particularly suitable for organisms for which whole-genome sequencing remains unaffordable or unscalable for routine applications, such as protozoan parasites which are not amenable to laboratory culture-based methods.</p>
+                    <p><strong>Main Contributions:</strong></p>
+                    <ul>
+                        <li><strong>Module creation</strong>: Phylogenetics analysis module and subworkflows has been created using nf-core tools</li>
+                    </ul>
+                </div>
+            </div>               
         </div>
     </div>    
 
