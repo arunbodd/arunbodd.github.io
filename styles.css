@@ -1,108 +1,53 @@
 body {
     font-family: "Lucida Console", Monospace;
     text-align: center;
-    margin: 5%; /* Use relative units */
+    margin: 5%;
     position: relative;
     z-index: 1;
 }
 
 .circular-image {
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 20px 10px; /* Fix the missing px */
+    margin: 20px 10px;
 }
 
 h1, h2 {
     color: rgb(0, 0, 0);
-    font-size: 2rem; /* Use relative units */
+    font-size: 2rem;
 }
 
 .heading-colored {
-    color: #FF6347; /* Replace with your desired color code */
+    color: #FF6347;
 }
 
-@media only screen and (max-width: 1340px) {
-    .container {
-      width: 68%;
-    }
-}
-
-@media only screen and (max-width: 1127px) {
-    .container {
-      width: 80%;
-    }
-}
-
-@media only screen and (max-width: 962px) {
-    .container {
-      width: 90%;
-    }
-}
-
-@media only screen and (max-width: 675px) {
-    .container {
-      min-width: 100px;
-      width: 92%;
-      margin-top: 2rem;
-    }
-    .container .title h1 {
-      font-size: 2.3rem;
-    }
-    .container .list {
-      margin: 1rem 0;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .container {
-      padding: 0.4rem;
-    }
-    .container .title h1 {
-      font-size: 1.5rem;
-    }
-    .container .list {
-      margin: 1rem 0;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-    .container .list a {
-      margin: 0.7rem 0.45rem;
-      font-size: 1rem;
-    }
-}
-
-/* Style the tab */
 .tab {
     overflow: hidden;
     border-bottom: 1px solid #3a3939;
     background-color: rgb(69, 70, 71);
 }
 
-/* Style the buttons inside the tab */
 .tab button {
     background-color: hsla(10, 70%, 70%, 10);
-    float: center;
+    float: left; /* Changed to left to align buttons properly */
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font-size: 1.25rem; /* Use relative units */
+    font-size: 1.25rem;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
     background-color: #555;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
     background-color: rgb(20, 186, 26);
 }
 
-/* Style the tab content */
 .tabcontent {
     display: none;
     padding: 6px 8px;
@@ -114,11 +59,10 @@ h1, h2 {
     padding: 0 18px;
     display: block;
     overflow: visible;
-    font-size: 1.25rem; /* Use relative units */
+    font-size: 1.25rem;
     text-align: justify;
 }
 
-/* Container for publications */
 .publication-container {
     display: flex;
     justify-content: center;
@@ -145,26 +89,27 @@ h1, h2 {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
+    width: 500px; /* Changed to 90% for better mobile view */
     background: rgb(236, 242, 239);
-    border: 1px solid rgb(19, 43, 222);
+    border: 2px solid rgb(19, 43, 222);
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    z-index: 10; /* Ensures the details box is on top */
+    text-align: center;
+    z-index: 10;
 }
+
 .publication:hover .details {
     display: block;
 }
 
 a {
-    color: #FF6347; /* Blue color for hyperlinks */
-    text-decoration: none; /* Remove underline */
+    color: #FF6347;
+    text-decoration: none;
 }
 
 a:hover {
-    color: #0e77e0; /* Darker blue on hover */
-    text-decoration: underline; /* Underline on hover */
+    color: #0e77e0;
+    text-decoration: underline;
 }
 
 .dark-mode {
@@ -203,14 +148,12 @@ a:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Dark mode toggle switch */
 .dark-mode-toggle {
     position: absolute;
     top: 20px;
     right: 30px;
 }
 
-/* Switch */
 .switch {
     position: relative;
     display: inline-block;
@@ -262,4 +205,83 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 1340px) {
+    .container {
+      width: 68%;
+    }
+}
+
+@media only screen and (max-width: 1127px) {
+    .container {
+      width: 80%;
+    }
+}
+
+@media only screen and (max-width: 962px) {
+    .container {
+      width: 90%;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .container {
+      min-width: 100px;
+      width: 92%;
+      margin-top: 2rem;
+    }
+    .container .title h1 {
+      font-size: 2.3rem;
+    }
+    .container .list {
+      margin: 1rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .circular-image {
+        width: 100px;
+        height: 100px;
+    }
+    .tab button {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+    .content {
+        font-size: 1rem;
+    }
+    .details {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+      padding: 0.4rem;
+    }
+    .container .title h1 {
+      font-size: 1.5rem;
+    }
+    .container .list {
+      margin: 1rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .container .list a {
+      margin: 0.7rem 0.45rem;
+      font-size: 1rem;
+    }
+    .circular-image {
+        width: 80px;
+        height: 80px;
+    }
+    .tab button {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+    .content {
+        font-size: 0.9rem;
+    }
+    .details {
+        width: 70%;
+    }
 }
