@@ -542,118 +542,230 @@ ul li {
 
 
 /* Publication card styling */
+.publications {
+    padding: 30px 15px;
+}
 
-.card {
-    border: none;
+.publications .publication-card {
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Ensures no content overflows the card boundary */
 }
 
-.card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.publications .publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Card Image */
-.card-img-top {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    object-position: center; /* Center the image if it needs cropping */
-    height: 180px; /* Fixed height to maintain card layout, adjust as needed */
+.publications .publication-card img {
     width: 100%;
-    transition: transform 0.3s ease;
+    height: auto;
+    border-radius: 8px 8px 0 0;
 }
 
-.card-img-top:hover {
-    transform: scale(1.05);
+.publications .publication-card .card-body {
+    padding: 15px;
 }
 
-/* Card Body */
-.card-body {
-    padding: 16px;
+.publications .publication-card .card-body h2 {
+    font-size: 1.5rem;
+    color: #000; /* Consistent black color */
+    text-transform: uppercase; /* All caps */
 }
 
-.card-title {
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-    font-weight: bold;
-}
-
-.card-title a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.card-title a:hover {
-    color: #007bff; /* Or any color matching your theme */
-}
-
-/* Card Text */
-.card-text {
+.publications .publication-card .card-body p {
     font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-}
-.card-link {
-    display: block;
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit text color */
-}
-
-/* Container */
-.publication-container {
-    margin-top: 30px; /* Adjust as needed */
-}
-
-@media (max-width: 768px) {
-    .card-img-top {
-        height: 150px; /* Adjust for smaller screens */
-    }
+    color: #666;
 }
 
 
-/* Footer Styles */
-.footer {
-    margin-top: auto;
-    background-color: #1f2122;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative; /* For positioning the back-to-top button */
-}
-
-/* Footer Content */
-.footer-content {
+/* Footer Container */
+.footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1rem; /* Adjust padding as needed */
+    background-color: #333; /* Background color for footer */
 }
 
-/* Footer Icons Container */
-.footer-icons {
+/* Social Links Container */
+.social-links {
     display: flex;
     gap: 15px; /* Space between icons */
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Space below the icons */
 }
 
-/* Style for all icons */
-.footer-icons a {
+/* Style for social icons */
+.social-icon {
+    color: #fff; /* Default color for icons */
+    font-size: 1.5rem; /* Adjust icon size as needed */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #4493d8; /* Default icon color on hover */
+}
+
+/* Specific color for each social icon */
+.social-icon.linkedin {
+    color: #0a66c2; /* LinkedIn default color */
+}
+
+.social-icon.linkedin:hover {
+    color: #0a66c2; /* LinkedIn hover color */
+}
+
+.social-icon.github {
+    color: #9e9b9b; /* GitHub default color */
+}
+
+.social-icon.github:hover {
+    color: #fff; /* GitHub hover color */
+}
+
+.social-icon.google-scholar {
+    color: #ea4335; /* Google Scholar default color */
+}
+
+.social-icon.google-scholar:hover {
+    color: #ea4335; /* Google Scholar hover color */
+}
+
+/* Copyright Text */
+.copyright p {
+    color: #fff; /* Sets the text color to white */
+    font-size: 0.875rem; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Container */
+.footer-container {
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Social Links Container */
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
     color: #fff;
     font-size: 1.5rem;
     transition: color 0.3s;
+    margin: 0 10px; /* Space between icons */
 }
 
-.footer-icons a:hover {
-    color: #4493d8; /* Icon color on hover */
+.social-icon:hover {
+    color: #4493d8; /* General hover color */
 }
-footer p {
-    color: #fff; /* Sets the text color to white */
+
+/* Specific Icon Hover Colors */
+.social-icon.linkedin:hover {
+    color: #0077b5; /* LinkedIn hover color */
 }
+
+.social-icon.github:hover {
+    color: #fff; /* Brighter white for GitHub */
+}
+
+.social-icon.google-scholar:hover {
+    color: #4285f4; /* Google Scholar hover color */
+}
+
+/* Footer Link Style */
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #4493d8; /* Hover color */
+}
+
+/* Modal Background Overlay */
+#easter-egg-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Make sure it's on top */
+    overflow: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal Content */
+#easter-egg-content {
+    position: relative;
+    margin: 15% auto; /* Center the modal */
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 0.3s ease-out;
+}
+
+/* Modal Header */
+#easter-egg-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+/* Close Button */
+#easter-egg-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#easter-egg-content .close:hover {
+    color: #e74c3c; /* Color on hover */
+}
+
+/* Animation for Modal */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Optional: Adding Fade Effect */
+#easter-egg-modal.fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#easter-egg-modal.fade.in {
+    opacity: 1;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none; /* Hide elements with this class */
+}
+
 
 
 /* Back-to-top Button */
