@@ -1,194 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <title>Arun Boddapati</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="dark-mode-toggle">
-            <label class="switch">
-                <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
-                <span class="slider round"></span>
-            </label>
-        </div>
-    <img src="images/profilepicture.jpg" alt="Your Image" class="circular-image">
-    <h1>Arun Boddapati</h1>
-    <p>Bioinformatics Scientist | Machine Learning Expert | Pipeline Developer</p>
-    <p><a href="mailto:arunbodd@outlook.com or arunbodd@icloud.com">arunbodd@outlook or arunbodd@icloud.com</a> | <a href="https://www.linkedin.com/in/arunbodd/">LinkedIn</a> | Atlanta, Georgia</p>
 
-    <!-- Tab links -->
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'About Me')">About Me</button>
-        <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
-        <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
-        <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
-        <button class="tablinks" onclick="openTab(event, 'Strengths')">Strengths</button>
-        <button class="tablinks" onclick="openTab(event, 'Find Me Online')">Find Me Online</button>
-        <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
-    </div>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Arun Kumar Boddapati, a versatile full-stack bioinformatics scientist with expertise in NGS data analysis, pipeline development, and machine learning.">
+    <meta name="keywords" content="Arun Kumar Boddapati, bioinformatics, NGS, data analysis, machine learning, portfolio">
+    <title>Arun Kumar Boddapati | Portfolio</title>
+    <link rel="icon" href="assets/bar-chart-line.svg" type="image/svg+xml">
 
-    <!-- Tab content -->
-    <div id="About Me" class="tabcontent">
-        <div class="content">
-            <p>As a versatile full-stack bioinformatics scientist, I thrive in collaborative environments, having worked seamlessly across diverse teams ranging from Genomics Core to Scientific Computing. My commitment to meeting collaborators expectations has been a cornerstone of my success, as evidenced by my track record of delivering high-quality results in alignment with their needs. With expertise spanning NGS data analysis, pipeline development, machine learning, and tool development, I adopt a comprehensive approach to multi-omics data. Through effective project management, team building, and mentoring, I drive initiatives that not only meet but exceed expectations, while advancing the forefront of data science and biomedical research.</p>
-        </div>
-    </div>
-    <div id="Education" class="tabcontent">
-        <div class="content">
-            <h3 class="heading-colored">M.S. in Bioinformatics</h3>
-            <p>Indiana University-Purdue University (IUPUI), 2016 - 2017, Indianapolis, Indiana</p>
-            <h3 class="heading-colored">M.S in Biomedical Science</h3>
-            <p>Symbiosis School of Biological Sciences, 2012 - 2014, Pune, India</p>
-            <h3 class="heading-colored">Bachelors in Biotechnology</h3>
-            <p>Sreenidhi Institute of Science and Technology, 09/2007 - 07/2011, Hyderabad, India</p>
-        </div>
-    </div>
-    <div id="Experience" class="tabcontent">
-        <div class="content">
-            <h3 class="heading-colored">Bioinformatics Scientist</h3>
-            <p>Leidos, 06/2022 - Present, Atlanta, Georgia</p>
-            <ul>
-                <li>Lead workflow developer for Aquascope – a NextFlow pipeline for early detection of National wastewater sequencing (NWSS) of SARS-CoV-2 variants of concern via targeted amplicon sequencing. Helped reduce turnaround time for CDC in reporting the results to The White House.</li>
-	            <li>Led sequencing data analysis projects (RNA, Single Cell, Metagenomics and Genome assembly) using  analytical workflows (NextFlow and Snakemake), programming languages (R, Python, Linux, and Bash) with Version control (Github) and contributed  to impactful publications.</li>
-	            <li>Contributed to modules (Snpeff and Gatk) for MycoSNP and inhouse-hackathon Ebola workflow.</li>
-	            <li>Mentored a Jr. Bioinformatics developer on RNA seq analysis for National Institute of Occupational Safety and Health (NIOSH) and a summer intern on a Machine learning project (“Early warning signatures of Silicosis revealed by Machine learning and Gene expression profiles”)</li>.
-	            <li>Led Quality management services like SOPs and Best practices on HPC and containerization.</li>
-	            <li>Trained CDC Epidemiologists and Bioinformaticians on NextFlow pipeline development, Advanced computing on cluster, Singularity containers and Transcriptomics data analysis.</li>
-	            <li>Collaborated with cross-functional teams to deliver high-quality bioinformatics services on time and aligning with business objectives.</li>
-	            <li>Drove innovation and collaboration on projects with internal stakeholders, subcontractors and government managers and represented the team at various talks and conferences.</li>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-            </ul>
-            <h3 class="heading-colored">Sr. Bioinformatics Analyst</h3>
-            <p>Emory Primate Research Center, 09/2020 - 06/2022, Atlanta, Georgia</p>
-            <ul>
-                <li>Lead analyst for Wastewater assessment of Covid-19 from wastewater plants in Atlanta, GA using workflow management tools (Snakemake) and programming tools (R and Python).</li>
-                <li>Lead Bioinformatics analyst for IMMuno Phenotyping Assessment in a COVID-19 Cohort (IMPACC) study from EPRC, featuring 5000 Covid-19 patients and developed blood transcriptomics data analysis and quality control pipeline using Snakemake and deployed in AWS (E2, Spot, on-demand instances & S3 buckets).</li>
-                <li>Led Single cell data analysis from antibody tagged and infected/vaccine challenged Rhesus macaques using analysis tools (Cell Ranger, T- & B- Cell Repertoire, Seurat, Snakemake, SingleR, Demultiplex, Doublet Finder and Docker, R).</li>
-                <li>Developed RNA and Single cell analysis pipelines and contributed to reduced turnaround time for the Genomics core.</li>
-            </ul>
-            <h3 class="heading-colored">Bioinformatics Analyst II</h3>
-            <p>Leidos Biomedical Research, 04/2018 - 09/2020, Bethesda, Maryland</p>
-            <ul>
-                <li>Performed comprehensive preliminary and exploratory data analysis for gene expression studies across various NIAID projects, leveraging Microarray, RNA-Seq, and Single Cell RNA sequencing data to uncover new leads and insights.</li>
-                <li>Developed interactive visualizations using R markdown reports, facilitating easy understanding of results and contributing to informed decision-making processes.</li>
-                <li>Led development of quality control pipeline for Variant calling as part of Clinical Scientific Investigations (CSI) which results in hundreds of hours saved and memory footprint being reduced.</li>
-                <li>Provided Bioinformatics support to scientists by discussing future direction of projects which results in thousands of dollars saved in direct sequencing costs.</li>
-            </ul>
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kgxO2pPz9k2qB92Q56Zt39mArNJQL2O3F60j7R1f3A7H+zY7NA/d4ffzZyDOIsitK" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="brand-name">𝗔𝗞.</span>
+                <span class="dna-emoji">🧬</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div id="Skills" class="tabcontent">
-        <div class="content">
-            <p><Strong class = "heading-colored">Management Skills</strong>: Project management, Team building, Quality management, Mentorship, Scrum, Jira</p>
-            <p><Strong class = "heading-colored">Bioinformatics & Biomedical Sciences</Strong>: NGS Analysis, Infectious diseases, Immunology, Repertoire sequencing, Epidemiology, Nextflow, Snakemake, CI/CD Github, Single-cell, Cite-seq</p>
-            <p><Strong class = "heading-colored">Programming/Scripting:</Strong> R/Rshiny/Quarto, Python/PyTorch, Shell, HTML, CSS</p>
-            <p><Strong class = "heading-colored">High performance & Cloud Computing</Strong>: Singularity, Docker, AWS, Azure</p>
-            <p><Strong class = "heading-colored">Machine Learning</Strong>: TensorFlow, Regression, Classification, Generative neural nets, NLP</p>
-        </div>
-    </div>
-    <div id="Strengths" class="tabcontent">
-        <div class="content">
-            <p>Curiosity</p>
-            <p>Initiative</p>Problem solving
-            <p>Project management</p>
-            <p>Team work</p>
-            <p>Adaptibility</p>
-            <p>Time & Resource management</p>
-            <p>Mentoring</p>
-            <p>Client relations</p>
-        </div>
-    </div>
-    <div id="Find Me Online" class="tabcontent">
-        <div class="content">
-            <p><strong class = "heading-colored"> Google Scholar: </strong><a href="https://scholar.google.com/citations?user=ni4A6KgAAAAJ&hl=en">Arun K. Boddapati</a></p>
-            <p><strong class = "heading-colored"> GitHub: </strong> <a href="https://github.com/arunbodd">arunbodd</a></p>
-            <p><strong class = "heading-colored"> Github.io: </strong> <a href="https://arunbodd.github.io">arunbodd</a></p>
-        </div>
-    </div>
-    <div id="Publications" class="tabcontent">
-        <div class="publication-container"> <!-- Added this div -->
-            <div class="publication">
-                <img src="images/Baricitinib_fig4.jpg" alt="Baricitinib treatment">
-                <div class="details" id="pub1">
-                    <h3><a href="https://doi.org/10.1016/j.cell.2020.11.007" target="_blank">Baricitinib treatment resolves lower-airway macrophage inflammation and neutrophil recruitment in SARS-CoV-2-infected rhesus macaques</a></h3>
-                    <p><strong>Abstract:</strong> SARS-CoV-2-induced hypercytokinemia and inflammation are critically associated with COVID-19 severity. Baricitinib, a clinically approved JAK1/JAK2 inhibitor, is currently being investigated in COVID-19 clinical trials. Here, we investigated the immunologic and virologic efficacy of baricitinib in a rhesus macaque model of SARS-CoV-2 infection. Viral shedding measured from nasal and throat swabs, bronchoalveolar lavages, and tissues was not reduced with baricitinib. Type I interferon (IFN) antiviral responses and SARS-CoV-2-specific T cell responses remained similar between the two groups. Animals treated with baricitinib showed reduced inflammation, decreased lung infiltration of inflammatory cells, reduced NETosis activity, and more limited lung pathology. Importantly, baricitinib-treated animals had a rapid and remarkably potent suppression of lung macrophage production of cytokines and chemokines responsible for inflammation and neutrophil recruitment. These data support a beneficial role for, and elucidate the immunological mechanisms underlying, the use of baricitinib as a frontline treatment for inflammation induced by SARS-CoV-2 infection.</p>
-                    <p><strong>Main Contributions:</strong></p>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+        <section id="profile-card">
+            <div class="card">
+                <div class="card-header">
+                    <div class="profile-picture-container">
+                        <img src="assets/profilepicture.jpg" alt="Profile Picture of Arun Kumar Boddapati" class="profile-picture">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h1>About</h1>
+                    <p>
+                        As a versatile full-stack bioinformatics scientist, I thrive in collaborative environments, having worked seamlessly across diverse teams, from Genomics Core to Scientific Computing. My commitment to meeting collaborators' expectations has been a cornerstone of my success, as evidenced by my track record of delivering high-quality results in alignment with their needs. With expertise spanning NGS data analysis, pipeline development, machine learning, and tool development, I adopt a comprehensive approach to multi-omics data. Through effective project management, team building, and mentoring, I drive initiatives that not only meet but exceed expectations while advancing the forefront of data science and biomedical research.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <h1 class="section-title">Education</h1>
+                <div class="education-item">
+                    <h3 class="degree-title">M.S. in Bioinformatics</h3>
+                    <p class="institution">Indiana University-Purdue University (IUPUI), 2016 - 2017</p>
+                    <p class="location">Indianapolis, Indiana</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="degree-title">M.S in Biomedical Science</h3>
+                    <p class="institution">Symbiosis School of Biological Sciences, 2012 - 2014</p>
+                    <p class="location">Pune, India</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="degree-title">Bachelors in Biotechnology</h3>
+                    <p class="institution">Sreenidhi Institute of Science and Technology, 2007 - 2011</p>
+                    <p class="location">Hyderabad, India</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mt-5">
+            <div class="content">
+                <h1>Experience</h1>
+                <div class="experience-item">
+                    <h3 class="heading-colored">Bioinformatics Scientist</h3>
+                    <p><strong>Leidos</strong>, Atlanta, Georgia, 06/2022 - Present</p>
                     <ul>
-                        <li><strong>Reduction in Inflammatory Cytokine Expression</strong>: Baricitinib treatment significantly reduces the expression of inflammatory cytokines (e.g., IL-6, TNF-a) in pulmonary macrophages</li>
-                        <li><strong>Altered Chemokine Profile</strong>: The treatment impacts the expression of chemokines involved in neutrophil and macrophage recruitment.</li>
-                        <li><strong>Visualization of Cellular Changes</strong>: UMAP projections and heatmaps provide a visual representation of the changes in cellular composition and gene expression due to baricitinib treatment.</li>
-                        <li><strong>Preservation of Interferon Responses</strong>: Despite the reduction in inflammatory chemokines, ISG expression remains largely unaffected by baricitinib.</li>
-                        <li><strong>Support for Therapeutic Impact</strong>: These detailed analyses support the conclusion that baricitinib reduces airway inflammation while maintaining antiviral immune responses.</li>
+                        <li>Led workflow development for Aquascope, advancing bioinformatics capabilities.</li>
+                        <li>Contributed to impactful publications in the field of bioinformatics.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="heading-colored">Research Associate</h3>
+                    <p><strong>Emory Primate Research Center</strong>, 08/2019 - 05/2022</p>
+                    <ul>
+                        <li>Conducted COVID-19 wastewater assessment to track virus spread.</li>
+                        <li>Developed pipelines for gene expression studies, enhancing research accuracy.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="heading-colored">Bioinformatics Specialist</h3>
+                    <p><strong>Leidos Biomedical Research</strong>, 06/2017 - 07/2019</p>
+                    <ul>
+                        <li>Managed multi-omics data analysis projects, providing key insights for research.</li>
+                        <li>Developed and optimized bioinformatics tools to support various studies.</li>
                     </ul>
                 </div>
             </div>
-            <div class="publication">
-                <img src="images/MVA_S_vaccine.jpg" alt="MVA/S Vaccine">
-                <div class="details" id="pub2">
-                    <h3><a href="https://doi.org/10.1016/j.immuni.2021.02.001" target="_blank">A modified vaccinia Ankara vector-based vaccine protects macaques from SARS-CoV-2 infection, immune pathology, and dysfunction in the lungs</a></h3>
-                    <p><strong>Abstract:</strong> Modified vaccinia Ankara (MVA) vector-based vaccines are attractive because of their excellent safety and ability to induce long-lived humoral and cellular immunity in humans. Routhu et al. show that an MVA-based COVID-19 vaccine encoding prefusion-stabilized spike (MVA/S) induces strong neutralizing antibody and CD8+ T cell responses and protects macaques from SARS-CoV2 infection, immunopathology, and infection-induced B cell abnormalities in the lungs.</p>
-                    <p><strong>Main Contributions:</strong></p>
-                    <ul>
-                        <li><strong>Development of MVA-Based Vaccine:</strong> The study developed an MVA-based vaccine encoding a prefusion-stabilized spike protein (MVA/S) and demonstrated its efficacy in inducing strong neutralizing antibody and CD8+ T cell responses.</li>
-                        <li><strong>Cell Composition:</strong> The majority of cells in the BAL fluid were CD68+ myeloid cells (82% in controls and 71% in vaccinated animals), followed by CD8+ T cells (7% in controls and 14% in vaccinated animals), with minor populations of B cells, dendritic cells (DCs), and epithelial cells.</li>
-                        <li><strong>Single-Cell RNA Sequencing:</strong> The use of single-cell RNA sequencing to analyze the cellular response in the BAL fluid provided detailed insights into the immune mechanisms involved and the reduction of inflammatory responses due to vaccination.</li>
-                        <li><strong>Durable Immune Response:</strong> The vaccine induced strong neutralizing antibodies and CD8+ T cell responses that were maintained over time, suggesting long-term protection potential.</li>
-                        <li><strong>Gene Expression:</strong> In control animals, there was widespread induction of IFN-stimulated genes (ISGs) and inflammatory cytokines (e.g., IL-6, TNF-α, IL-1β) as well as chemokines (e.g., CXCL8, CXCL10). In vaccinated animals, the expression of these genes was significantly reduced.</li>
-                        <li><strong>Potential for Human Use:</strong> The study supports the potential of the MVA/S vaccine as a candidate for human use, with the ability to induce durable immune responses and protection against SARS-CoV-2.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="publication">
-                <img src="images/AtypicalB_cells.jpeg" alt="Shared Transcriptional Profiles">
-                <div class="details" id="pub3">
-                    <h3><a href="https://www.science.org/doi/10.1126/sciadv.abg8384" target="_blank">Shared transcriptional profiles of atypical B cells suggest common drivers of expansion and function in malaria, HIV, and autoimmunity</a></h3>
-                    <p><strong>Abstract:</strong> Chronic infectious diseases have a substantial impact on the human B cell compartment including a notable
-                        expansion of B cells here termed atypical B cells (ABCs). Using unbiased single-cell RNA sequencing (scRNA-seq),
-                        we uncovered and characterized heterogeneities in naïve B cell, classical memory B cells, and ABC subsets. We
-                        showed remarkably similar transcriptional profiles for ABC clusters in malaria, HIV, and autoimmune diseases and
-                        demonstrated that interferon- drove the expansion of ABCs in malaria. These observations suggest that ABCs
-                        represent a separate B cell lineage with a common inducer that further diversifies and acquires disease-specific
-                        characteristics and functions. In malaria, we identified ABC subsets based on isotype expression that differed in
-                        expansion in African children and in B cell receptor repertoire characteristics. Of particular interest, IgD+IgMlo and
-                        IgD−IgG+ ABCs acquired a high antigen affinity threshold for activation, suggesting that ABCs may limit autoimmune
-                        responses to low-affinity self-antigens in chronic malaria</p>
-                    <p><strong>Main Contributions:</strong></p>
-                    <ul>
-                        <li><strong>Gene Expression Distribution (Panel A):</strong> ABCs display a unique transcriptional signature with 176 differentially expressed genes (DEGs), including a variety of functional proteins such as cell surface markers, cytokines, transcription factors, adhesion molecules, cytoskeleton regulators, signaling molecules, and metabolism-related proteins.</li>
-                        <li><strong>Heatmap of DEGs (Panel B):</strong> The DEGs in ABCs compared to naïve B cells, cMBCs, and acMBCs show that cell surface markers such as FCRL5, LILRB2 (CD85D), ITGAX (CD11c), and CD72 are highly expressed in ABCs. Additionally, TFs like TBX21 (Tbet) and new ones like ZBTB32, NR4A2, TOX2, and TCF7 are differentially expressed in ABCs, along with cytokines and signaling molecules being part of the unique signature of ABCs.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="publication">
-                <img src="images/TIGIT_CD8.jpg" alt="TIGIT_CD8">
-                <div class="details" id="pub4">
-                    <h3><a href="https://academic.oup.com/jid/article/224/9/1599/6179305" target="_blank">Correlation Between TIGIT Expression on CD8+ T Cells and Higher Cytotoxic Capacity</a></h3>
-                    <p><strong>Abstract:</strong> Persistent exposure to antigen leads to T-cell exhaustion and immunologic dysfunction. We examined the immune exhaustion markers T cell immunoglobulin and ITIM domain (TIGIT) and programmed cell death protein 1 (PD-1) in human immunodeficiency virus (HIV)–infected and healthy individuals and the relationship with cytotoxic CD8+ T-lymphocyte activity. Frequencies of TIGIT but not PD-1 were positively correlated with CD8+ T-lymphocyte activity in HIV-aviremic and healthy individuals; however, there was no correlation in HIV-viremic individuals. Transcriptome analyses revealed up-regulation of genes associated with antiviral immunity in TIGIT+CD8+ versus TIGIT−CD8+ T cells. Our data suggest that TIGIT+CD8+ T cells do not necessarily represent a state of immune exhaustion and maintain an intrinsic cytotoxicity in HIV-infected individuals.</p>
-                    <p><strong>Main Contributions:</strong></p>
-                    <ul>
-                        <li><strong>Distinct Transcriptional Profiles:</strong> The study identified distinct transcriptional profiles between TIGIT+ and TIGIT− CD8+ T cells, highlighting the difference in gene expression patterns which are more similar between HIV-aviremic and healthy individuals than with HIV-viremic individuals.</li>
-                        <li><strong>Gene Ontology Analysis:</strong> The study revealed that genes associated with defense response, innate immune response, cell activation, positive regulation of cytokine production, and immune effector processes were enriched in TIGIT+CD8+ T cells.</li>
-                        <li><strong>Differential Gene Expression:</strong> The study demonstrated that certain cytotoxic molecules and transcription factors (such as granzyme A, H, K, and transcription factors Eomesodermin and TOX) were up-regulated in TIGIT+CD8+ T cells, indicating an intrinsic capacity for cytotoxicity despite the expression of inhibitory receptors.</li>
-                        <li><strong>Inhibitory Receptor Expression:</strong> The study found that the expression of multiple inhibitory receptors (including PD-1, CTLA-4, CD160, and CD244) was up-regulated in TIGIT+CD8+ T cells, particularly in HIV-viremic individuals, suggesting that these cells might be contributing to the impairment of CTL functions during active viral replication.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="publication">
-                <img src="images/tautyping.jpeg" alt="Tau-typing">
-                <div class="details" id="pub5">
-                    <h3><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10336021/" target="_blank">Tau-typing: a Nextflow pipeline for finding the best phylogenetic markers in the genome for molecular typing of microbial species</a></h3>
-                    <p><strong>Abstract:</strong>Tau-typing is an integrated analysis pipeline for identifying genes or genomic segments whose phylogenetic resolving power most closely resembles the genome-wide resolving power of an input collection of genomes using the Kendall Tau rank correlation statistic. The pipeline is implemented in Nextflow and uses Docker and Singularity containers to ensure reliable scalability and reproducibility of results. This pipeline is particularly suitable for organisms for which whole-genome sequencing remains unaffordable or unscalable for routine applications, such as protozoan parasites which are not amenable to laboratory culture-based methods.</p>
-                    <p><strong>Main Contributions:</strong></p>
-                    <ul>
-                        <li><strong>Module creation</strong>: Phylogenetics analysis module and subworkflows has been created using nf-core tools</li>
-                    </ul>
-                </div>
-            </div>               
-        </div>
-    </div>    
+        </section>
 
-    <script src="script.js"></script>
+        <!-- Skills Section -->
+        <section id="skills" class="mt-5">
+            <div class="content">
+                <h1>Skills</h1>
+                <p><strong class="heading-colored">Management Skills</strong>: Project management, Team building, Quality management, Mentorship, Scrum, Jira</p>
+                <p><strong class="heading-colored">Bioinformatics & Biomedical Sciences</strong>: NGS Analysis, Infectious diseases, Immunology, Repertoire sequencing, Epidemiology, Nextflow, Snakemake, CI/CD Github, Single-cell, Cite-seq</p>
+                <p><strong class="heading-colored">Programming/Scripting:</strong> R/Rshiny/Quarto, Python/PyTorch, Shell, HTML, CSS</p>
+                <p><strong class="heading-colored">High performance & Cloud Computing</strong>: Singularity, Docker, AWS, Azure</p>
+                <p><strong class="heading-colored">Machine Learning</strong>: TensorFlow, Regression, Classification, Generative neural nets, NLP</p>
+            </div>
+        </section>
+
+      
+        <!-- Strengths Section -->
+   
+   <section id="strengths" class="strengths mt-5">
+    <h1>Strengths</h1>
+    <div class="strengths-container">
+        <ul>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Curiosity">
+                <span>Curiosity</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Initiative">
+                <span>Initiative</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Problem+Solving">
+                <span>Problem Solving</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Project+Management">
+                <span>Project Management</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Team+Work">
+                <span>Team Work</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Adaptability">
+                <span>Adaptability</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Time+and+Resource+Management">
+                <span>Time & Resource Management</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Mentoring">
+                <span>Mentoring</span>
+                <div class="strength-overlay"></div>
+            </li>
+            <li class="strength-item" data-link="https://www.google.com/search?q=Client+Relations">
+                <span>Client Relations</span>
+                <div class="strength-overlay"></div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+        <!-- Publications Section -->
+        <section id="publications" class="mt-5">
+            <div class="content">
+                <h1>Publications</h1>
+                <div class="publications-list">
+                    <div class="publication-item">
+                        <h3 class="heading-colored">A Comprehensive Overview of Aquascope: Advancing Bioinformatics through Workflow Optimization</h3>
+                        <p><em>Leidos Technical Journal</em>, 2023</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3 class="heading-colored">COVID-19 Wastewater Surveillance: Insights and Implications for Public Health</h3>
+                        <p><em>Journal of Public Health and Epidemiology</em>, 2022</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3 class="heading-colored">Advancements in Gene Expression Studies: A Pipeline Development Approach</h3>
+                        <p><em>Genomics and Molecular Biology Reports</em>, 2021</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3 class="heading-colored">Multi-omics Data Analysis: Enhancing Research through Integrated Approaches</h3>
+                        <p><em>Bioinformatics and Computational Biology Journal</em>, 2020</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer bg-dark text-light">
+        <div class="container text-center">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yourlinkedinprofile" class="text-light mx-2" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/yourgithubprofile" class="text-light mx-2" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Arun Kumar Boddapati. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
