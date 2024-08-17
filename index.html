@@ -1,456 +1,162 @@
-    <!doctype html>
-    <html lang="en">
+document.addEventListener('DOMContentLoaded', () => {
+    // Back to Top Button
+    const backToTopButton = document.getElementById('back-to-top');
+    if (backToTopButton) {
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Portfolio of Arun Kumar Boddapati, a versatile full-stack bioinformatics scientist with expertise in NGS data analysis, pipeline development, and machine learning.">
-        <meta name="keywords" content="Arun Kumar Boddapati, bioinformatics, NGS, data analysis, machine learning, portfolio">
-        <title>Arun Kumar Boddapati | Portfolio</title>
-        <link rel="icon" href="images/bar-chart-line.svg" type="image/svg+xml">
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    // Scroll to Footer for Contact Link
+    const contactLink = document.querySelector('.navbar-nav .nav-link[href="#footer"]');
+    if (contactLink) {
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('footer').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    }
 
-        <!-- Bootstrap Icons CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    // Open Google Search Link for Strength Items
+    const strengthItems = document.querySelectorAll('.strength-item');
+    strengthItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const link = this.getAttribute('data-link');
+            window.open(link, '_blank');
+        });
+    });
 
-        <!-- FontAwesome CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="styles.css">
-
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kgxO2pPz9k2qB92Q56Zt39mArNJQL2O3F60j7R1f3A7H+zY7NA/d4ffzZyDOIsitK" crossorigin="anonymous"></script>
-
-        <!-- Custom JavaScript -->
-        <script src="scripts.js"></script>
-    </head>
-
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <span class="brand-name">𝗔𝗞.</span>
-                    <span class="dna-emoji">🧬</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#education">Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#publications">Publications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#footer">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="container mt-5 pt-5">
-            <section id="profile-card">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="profile-picture-container">
-                            <img src="images/profilepicture.jpg" alt="Profile Picture of Arun Kumar Boddapati" class="profile-picture">
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h1>About</h1>
-                        <p>
-                            As a versatile full-stack bioinformatics scientist, I thrive in collaborative environments, having worked seamlessly across diverse teams, from Genomics Core to Scientific Computing. My commitment to meeting collaborators' expectations has been a cornerstone of my success, as evidenced by my track record of delivering high-quality results in alignment with their needs. With expertise spanning NGS data analysis, pipeline development, machine learning, and tool development, I adopt a comprehensive approach to multi-omics data. Through effective project management, team building, and mentoring, I drive initiatives that not only meet but exceed expectations while advancing the forefront of data science and biomedical research.
-                        </p>
-                    </div>
-                </div>
-            </section>
-   <!-- Education Section -->
-<section id="education" class="education-section">
-    <div class="container">
-        <h1 class="section-title">Education</h1>
-        <div class="education-item">
-            <img src="images/iupui.png" alt="Logo for IUPUI" class="education-logo">
-            <h3 class="degree-title">M.S. in Bioinformatics</h3>
-            <p class="institution">Indiana University-Purdue University (IUPUI), 2016–2017</p>
-            <p class="location">Indianapolis, Indiana.</p>
-        </div>
-        <div class="education-item">
-            <img src="images/symbiosis.png" alt="Logo for Symbiosis" class="education-logo">
-            <h3 class="degree-title">M.S. in Biomedical Science</h3>
-            <p class="institution">Symbiosis School of Biological Sciences, 2012–2014</p>
-            <p class="location">Pune, India.</p>
-        </div>
-        <div class="education-item">
-            <img src="images/sreenidhi.png" alt="Logo for Sreenidhi" class="education-logo">
-            <h3 class="degree-title">Bachelor's in Biotechnology</h3>
-            <p class="institution">Sreenidhi Institute of Science and Technology, 2007–2011</p>
-            <p class="location">Hyderabad, India.</p>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <!-- Experience Section -->
-    <section id="experience" class="mt-5">
-        <div class="content">
-            <h1>Experience</h1>
-            <div class="experience-item">
-                <h3 class="heading-colored">Bioinformatics Scientist</h3>
-                <p><strong>Leidos</strong>, Atlanta, Georgia, 06/2022 - Present</p>
-                <ul>
-                    <li>Lead workflow developer for Aquascope – a NextFlow pipeline for early detection of National wastewater sequencing (NWSS) of SARS-CoV-2 variants of concern via targeted amplicon sequencing. Helped reduce turnaround time for CDC in reporting the results to The White House.</li>
-                    <li>Led sequencing data analysis projects (RNA, Single Cell, Metagenomics and Genome assembly) using analytical workflows (NextFlow and Snakemake), programming languages (R, Python, Linux, and Bash) with Version control (Github) and contributed to impactful publications.</li>
-                    <li>Contributed to modules (Snpeff and Gatk) for MycoSNP and inhouse-hackathon Ebola workflow.</li>
-                    <li>Mentored a Jr. Bioinformatics developer on RNA seq analysis for National Institute of Occupational Safety and Health (NIOSH) and a summer intern on a Machine learning project (“Early warning signatures of Silicosis revealed by Machine learning and Gene expression profiles”).</li>
-                    <li>Led Quality management services like SOPs and Best practices on HPC and containerization.</li>
-                    <li>Trained CDC Epidemiologists and Bioinformaticians on NextFlow pipeline development, Advanced computing on cluster, Singularity containers and Transcriptomics data analysis.</li>
-                    <li>Collaborated with cross-functional teams to deliver high-quality bioinformatics services on time and aligning with business objectives.</li>
-                    <li>Drove innovation and collaboration on projects with internal stakeholders, subcontractors and government managers and represented the team at various talks and conferences.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3 class="heading-colored">Sr. Bioinformatics Analyst</h3>
-                <p><strong>Emory Primate Research Center</strong>, Atlanta, Georgia, 09/2020 - 06/2022</p>
-                <ul>
-                    <li>Lead analyst for Wastewater assessment of Covid-19 from wastewater plants in Atlanta, GA using workflow management tools (Snakemake) and programming tools (R and Python).</li>
-                    <li>Lead Bioinformatics analyst for IMMuno Phenotyping Assessment in a COVID-19 Cohort (IMPACC) study from EPRC, featuring 5000 Covid-19 patients and developed blood transcriptomics data analysis and quality control pipeline using Snakemake and deployed in AWS (E2, Spot, on-demand instances & S3 buckets).</li>
-                    <li>Led Single cell data analysis from antibody tagged and infected/vaccine challenged Rhesus macaques using analysis tools (Cell Ranger, T- & B- Cell Repertoire, Seurat, Snakemake, SingleR, Demultiplex, Doublet Finder and Docker, R).</li>
-                    <li>Developed RNA and Single cell analysis pipelines and contributed to reduced turnaround time for the Genomics core.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3 class="heading-colored">Bioinformatics Analyst II</h3>
-                <p><strong>Leidos Biomedical Research</strong>, Bethesda, Maryland, 04/2018 - 09/2020</p>
-                <ul>
-                    <li>Performed comprehensive preliminary and exploratory data analysis for gene expression studies across various NIAID projects, leveraging Microarray, RNA-Seq, and Single Cell RNA sequencing data to uncover new leads and insights.</li>
-                    <li>Developed interactive visualizations using R markdown reports, facilitating easy understanding of results and contributing to informed decision-making processes.</li>
-                    <li>Led development of quality control pipeline for Variant calling as part of Clinical Scientific Investigations (CSI) which results in hundreds of hours saved and memory footprint being reduced.</li>
-                    <li>Provided Bioinformatics support to scientists by discussing future direction of projects which results in thousands of dollars saved in direct sequencing costs.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-            
-    <!-- Skills Section -->
-    <section id="skills" class="mt-5">
-        <div class="content">
-            <h1>Skills</h1>
-            <div class="skills-container">
-                <!-- Management Skills -->
-                <div class="skill-item">
-                    <img src="images/project.png" alt="Management" class="skill-icon">
-                    <p>Project Management</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/team-building.png" alt="Team Building" class="skill-icon">
-                    <p>Team Building</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/quality-control.png" alt="Quality Management" class="skill-icon">
-                    <p>Quality Management</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/mentorship.png" alt="Mentorship" class="skill-icon">
-                    <p>Mentorship</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/scrum.png" alt="Scrum" class="skill-icon">
-                    <p>Scrum</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/jira.png" alt="Jira" class="skill-icon">
-                    <p>Jira</p>
-                </div>
+    // Easter Egg Modal
+    const easterEggLink = document.getElementById('easter-egg');
+    const modal = document.getElementById('easter-egg-modal');
+    const closeModal = document.querySelector('#easter-egg-content .close');
     
-                <!-- Bioinformatics & Biomedical Sciences -->
-                <div class="skill-item">
-                    <img src="images/analysis.png" alt="NGS Analysis" class="skill-icon">
-                    <p>NGS Analysis</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/coronavirus.png" alt="Infectious Diseases" class="skill-icon">
-                    <p>Infectious Diseases</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/antibodies.png" alt="Immunology" class="skill-icon">
-                    <p>Immunology</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/repo_sequencing.png" alt="Repertoire Sequencing" class="skill-icon">
-                    <p>Repertoire Sequencing</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/epidemiology.png" alt="Epidemiology" class="skill-icon">
-                    <p>Epidemiology</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/nextflow.png" alt="Nextflow" class="skill-icon">
-                    <p>Nextflow</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/snakemake.png" alt="Snakemake" class="skill-icon">
-                    <p>Snakemake</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/ci_cd.png" alt="CI/CD Github" class="skill-icon">
-                    <p>CI/CD Github</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/single-cell.png" alt="Single-cell" class="skill-icon">
-                    <p>Single-cell</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/site_sequencing.png" alt="Cite-seq" class="skill-icon">
-                    <p>Cite-seq</p>
-                </div>
+    if (easterEggLink && modal && closeModal) {
+        easterEggLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor behavior
+            modal.classList.add('in'); // Show the modal with fade-in effect
+            modal.style.display = 'block'; // Ensure the modal is displayed
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('in'); // Hide the modal with fade-out effect
+            setTimeout(() => {
+                modal.style.display = 'none'; // Hide the modal after the animation
+            }, 300); // Match this time with the animation duration
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.remove('in'); // Hide the modal with fade-out effect
+                setTimeout(() => {
+                    modal.style.display = 'none'; // Hide the modal after the animation
+                }, 300); // Match this time with the animation duration
+            }
+        });
+    }
+
+    // Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
     
-                <!-- Programming/Scripting -->
-                <div class="skill-item">
-                    <img src="images/r.png" alt="R" class="skill-icon">
-                    <p>R</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/rshiny.png" alt="RShiny" class="skill-icon">
-                    <p>RShiny</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/quarto.png" alt="Quarto" class="skill-icon">
-                    <p>Quarto</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/python.png" alt="Python" class="skill-icon">
-                    <p>Python</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/pytorch.png" alt="PyTorch" class="skill-icon">
-                    <p>PyTorch</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/shell.png" alt="Shell" class="skill-icon">
-                    <p>Shell</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/html.png" alt="HTML" class="skill-icon">
-                    <p>HTML</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/css.png" alt="CSS" class="skill-icon">
-                    <p>CSS</p>
-                </div>
-    
-                <!-- High Performance & Cloud Computing -->
-                <div class="skill-item">
-                    <img src="images/singularity.png" alt="Singularity" class="skill-icon">
-                    <p>Singularity</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/docker.png" alt="Docker" class="skill-icon">
-                    <p>Docker</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/aws.png" alt="AWS" class="skill-icon">
-                    <p>AWS</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/azure.png" alt="Azure" class="skill-icon">
-                    <p>Azure</p>
-                </div>
-    
-                <!-- Machine Learning -->
-                <div class="skill-item">
-                    <img src="images/tensorflow.png" alt="TensorFlow" class="skill-icon">
-                    <p>TensorFlow</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/regression.png" alt="Regression" class="skill-icon">
-                    <p>Regression</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/classification.png" alt="Classification" class="skill-icon">
-                    <p>Classification</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/neuralnets.png" alt="Generative Neural Nets" class="skill-icon">
-                    <p>Generative Neural Nets</p>
-                </div>
-                <div class="skill-item">
-                    <img src="images/nlp.png" alt="NLP" class="skill-icon">
-                    <p>NLP</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 
+    // Skills Section Functionality
+    const banners = document.querySelectorAll('.banner');
+    const skillSections = document.querySelectorAll('.all-skills');
 
-        
-            <!-- Strengths Section -->
-    
-    <section id="strengths" class="strengths mt-5">
-        <h1>Strengths</h1>
-        <div class="strengths-container">
-            <ul>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Curiosity">
-                    <span>Curiosity</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Initiative">
-                    <span>Initiative</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Problem+Solving">
-                    <span>Problem Solving</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Project+Management">
-                    <span>Project Management</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Team+Work">
-                    <span>Team Work</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Adaptability">
-                    <span>Adaptability</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Time+and+Resource+Management">
-                    <span>Time & Resource Management</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Mentoring">
-                    <span>Mentoring</span>
-                    <div class="strength-overlay"></div>
-                </li>
-                <li class="strength-item" data-link="https://www.google.com/search?q=Client+Relations">
-                    <span>Client Relations</span>
-                    <div class="strength-overlay"></div>
-                </li>
-            </ul>
-        </div>
-    </section>
+    banners.forEach(banner => {
+        banner.addEventListener('mouseenter', () => {
+            const bannerNumber = banner.getAttribute('data-banner');
+            skillSections.forEach(section => {
+                if (section.getAttribute('data-skill') === bannerNumber) {
+                    section.style.display = 'flex';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
 
+        banner.addEventListener('mouseleave', () => {
+            skillSections.forEach(section => {
+                section.style.display = 'none';
+            });
+        });
+    });
+});
 
+// Scroll Event Listener
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    const navbarBrand = document.querySelector('.navbar-brand');
+    const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const backToTopButton = document.getElementById('back-to-top');
 
-        <!-- Publications Section -->
-    <section id="publications" class="publications mt-5">
-        <h1>Publications</h1>
-        <div class="container publication-container">
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <a href="https://doi.org/10.1016/j.cell.2020.11.007" target="_blank" class="card-link">
-                        <div class="card publication-card">
-                            <img src="images/Baricitinib_fig4.jpg" alt="Baricitinib treatment" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Baricitinib treatment resolves lower-airway macrophage inflammation and neutrophil recruitment in SARS-CoV-2-infected rhesus macaques</h5>
-                                <p class="card-text">SARS-CoV-2 infection models show that Baricitinib treatment reduces inflammation and neutrophil recruitment in the lungs. The study supports its potential as a frontline treatment for COVID-19-related inflammation.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <a href="https://doi.org/10.1016/j.immuni.2021.02.001" target="_blank" class="card-link">
-                        <div class="card publication-card">
-                            <img src="images/MVA_S_vaccine.jpg" alt="MVA/S Vaccine" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">A modified vaccinia Ankara vector-based vaccine protects macaques from SARS-CoV-2 infection, immune pathology, and dysfunction in the lungs</h5>
-                                <p class="card-text">This study demonstrates that an MVA-based COVID-19 vaccine induces strong immune responses and provides protection against SARS-CoV-2 infection and related lung pathology in macaques.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <a href="https://www.science.org/doi/10.1126/sciadv.abg8384" target="_blank" class="card-link">
-                        <div class="card publication-card">
-                            <img src="images/AtypicalB_cells.jpeg" alt="Shared Transcriptional Profiles" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Shared transcriptional profiles of atypical B cells suggest common drivers of expansion and function in malaria, HIV, and autoimmunity</h5>
-                                <p class="card-text">Identifies common transcriptional profiles in atypical B cells across malaria, HIV, and autoimmune diseases, revealing shared mechanisms driving their expansion and function.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <a href="https://academic.oup.com/jid/article/224/9/1599/6179305" target="_blank" class="card-link">
-                        <div class="card publication-card">
-                            <img src="images/TIGIT_CD8.jpg" alt="TIGIT_CD8" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Correlation Between TIGIT Expression on CD8+ T Cells and Higher Cytotoxic Capacity</h5>
-                                <p class="card-text">Explores how TIGIT expression on CD8+ T cells correlates with cytotoxic capacity in HIV-infected and healthy individuals, suggesting TIGIT+ cells maintain intrinsic cytotoxicity despite exhaustion markers.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10336021/" target="_blank" class="card-link">
-                        <div class="card publication-card">
-                            <img src="images/tautyping.jpeg" alt="Tau-typing" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Tau-typing: a Nextflow pipeline for finding the best phylogenetic markers in the genome for molecular typing of microbial species</h5>
-                                <p class="card-text">Introduces Tau-typing, a Nextflow pipeline for identifying genomic markers with high phylogenetic resolution, particularly useful for organisms with limited culture-based methods.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    // Navbar and Back-to-Top Button Visibility
+    if (window.scrollY > 500) {
+        navbar.classList.add('scrolled', 'minimized');
+        navbarBrand.classList.add('scrolled');
+        navbarLinks.forEach(link => link.classList.add('scrolled-text'));
+        if (backToTopButton) {
+            backToTopButton.style.opacity = 1;
+            backToTopButton.style.visibility = 'visible';
+        }
+    } else {
+        navbar.classList.remove('scrolled', 'minimized');
+        navbarBrand.classList.remove('scrolled');
+        navbarLinks.forEach(link => link.classList.remove('scrolled-text'));
+        if (backToTopButton) {
+            backToTopButton.style.opacity = 0;
+            backToTopButton.style.visibility = 'hidden';
+        }
+    }
 
+    // Highlight Current Section
+    const sections = document.querySelectorAll('section');
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionTop + sectionHeight - 50) {
+            current = section.getAttribute('id');
+        }
+    });
 
+    navbarLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
 
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/arunbodd/" target="_blank" class="social-icon linkedin">
-                    <i class="fab fa-linkedin"></i> <!-- LinkedIn icon -->
-                </a>
-                <a href="https://github.com/arunbodd" target="_blank" class="social-icon github">
-                    <i class="fab fa-github"></i> <!-- GitHub icon -->
-                </a>
-                <a href="https://scholar.google.co.in/citations?user=ni4A6KgAAAAJ&hl=en" target="_blank" class="social-icon google-scholar">
-                    <i class="fab fa-google"></i> <!-- Google Scholar icon -->
-                </a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 <a href="#" id="easter-egg" class="footer-link">Arun Kumar Boddapati</a>. All rights reserved.</p>
-            </div>
-        </div>
-    <!-- Easter Egg Modal -->
-    <div id="easter-egg-modal" class="fade">
-        <div id="easter-egg-content">
-            <span class="close">&times;</span>
-            <h2>Stay Curious!</h2>
-            <p>You got this!</p>
-        </div>
-    </div>
-
-    </footer>
-
-    </html>
+    // Reveal Elements on Scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const viewportHeight = window.innerHeight;
+        if (elementTop < viewportHeight - 100) {
+            element.classList.add('visible');
+        } else {
+            element.classList.remove('visible');
+        }
+    });
+});
