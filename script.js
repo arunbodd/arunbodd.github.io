@@ -79,6 +79,29 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('active');
         });
     }
+
+    // Skills Section Functionality
+    const banners = document.querySelectorAll('.banner');
+    const skillSections = document.querySelectorAll('.all-skills');
+
+    banners.forEach(banner => {
+        banner.addEventListener('mouseenter', () => {
+            const bannerNumber = banner.getAttribute('data-banner');
+            skillSections.forEach(section => {
+                if (section.getAttribute('data-skill') === bannerNumber) {
+                    section.style.display = 'flex';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+
+        banner.addEventListener('mouseleave', () => {
+            skillSections.forEach(section => {
+                section.style.display = 'none';
+            });
+        });
+    });
 });
 
 // Scroll Event Listener
