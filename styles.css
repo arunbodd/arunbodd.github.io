@@ -524,44 +524,135 @@ ul li {
         font-size: 0.9rem;
     }
 }
-
-/* Skills Section Styles */
+/* General Skills Section Styles */
 #skills {
     padding: 30px;
     background-color: #f0f2f5; /* Light grey background for better contrast */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    position: relative;
+    overflow: hidden; /* Ensure contents don't overflow */
 }
 
-.skills-container {
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Banner Styles */
+.banners-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    padding: 20px;
 }
 
+/* General Banner Styles */
+.banner {
+    width: 200px;
+    height: 300px;
+    background-color: #f0f0f0; /* Default light color */
+    clip-path: polygon(
+        0% 0%, 
+        100% 0%, 
+        100% 100%, 
+        50% 80%, 
+        0% 100%
+    );
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added shadow and color transitions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    background-color: #e0e0e0; /* Slightly darker color on hover */
+}
+
+.banner-1 { background-color: #f9c2c2; }
+.banner-2 { background-color: #f9f4c2; }
+.banner-3 { background-color: #c2f9c2; }
+.banner-4 { background-color: #c2c8f9; }
+.banner-5 { background-color: #f9c2f9; }
+
+.banner-text {
+    position: absolute;
+    bottom: 50%; /* Positioning text in the vertical center */
+    left: 50%;   /* Center horizontally */
+    transform: translate(-50%, 50%); /* Offset for accurate centering */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for gloss effect */
+    color: #000; /* Text color */
+    padding: 10px 15px; /* Padding around the text */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    max-width: 90%; /* Ensure text doesn't overflow */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards; /* Fade in animation */
+}
+
+/* Skills Overlay Styles */
+.skills-overlay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.all-skills {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Skill Item Styles */
 .skill-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack icon and text vertically */
     align-items: center;
-    width: 120px; /* Consistent width for all skill items */
+    margin: 10px; /* Consistent margin for spacing */
+    width: 150px; /* Fixed width for consistency */
+    box-sizing: border-box;
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ddd; /* Border for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    overflow: hidden; /* Hide overflow text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for skill items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added transitions */
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards; /* Fade in animation */
 }
 
 .skill-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background-color: #f9f9f9; /* Slightly lighter background on hover */
+}
+
+.skill-item:hover .skill-icon {
+    animation: iconBounce 0.6s ease; /* Bounce effect for icon */
 }
 
 .skill-icon {
-    width: 80px; /* Consistent icon size */
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease; /* Animation for icon */
+    transform: rotate(0deg); /* Initial rotation */
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1) rotate(15deg); /* Slightly enlarge and rotate icon on hover */
 }
 
 .skill-item p {
@@ -570,54 +661,122 @@ ul li {
     color: #444;
     font-weight: bold;
     text-align: center;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
 }
 
-@media (max-width: 768px) {
-    .skill-item {
-        width: 100px; /* Adjust width for smaller screens */
-        padding: 10px;
+/* Biomedical Skills Banner Specific Styles */
+.biomedical-skills {
+    width: 250px;
+    height: 350px;
+    background-color: #e0f7fa; /* Light cyan background for distinction */
+    clip-path: polygon(
+        0% 0%, 
+        100% 0%, 
+        100% 100%, 
+        50% 85%, 
+        0% 100%
+    );
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.biomedical-skills:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.biomedical-skills .skill-item {
+    width: 200px;
+    height: auto; /* Auto height to accommodate longer text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Border for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for skill items */
+}
+
+.biomedical-skills .skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Animation for icon */
+}
+
+.biomedical-skills .skill-item:hover .skill-icon {
+    transform: scale(1.1) rotate(-15deg); /* Slightly enlarge and rotate icon on hover */
+}
+
+.biomedical-skills .skill-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
+}
+
+/* Machine Learning Skills Section Styles */
+.machine-learning-skills .skill-item {
+    width: 150px; /* Fixed width for consistency */
+    height: auto; /* Auto height to accommodate longer text */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Border for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for skill items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for shadow and scale */
+}
+
+.machine-learning-skills .skill-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Hover Effects for Banners and Skills */
+[data-skill="1"]:hover ~ .skills-overlay [data-skill="1"],
+[data-skill="2"]:hover ~ .skills-overlay [data-skill="2"],
+[data-skill="3"]:hover ~ .skills-overlay [data-skill="3"],
+[data-skill="4"]:hover ~ .skills-overlay [data-skill="4"],
+[data-skill="5"]:hover ~ .skills-overlay [data-skill="5"] {
+    display: block;
+    animation: fadeIn 0.5s ease-out forwards; /* Fade in animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    
-    .skill-icon {
-        width: 60px; /* Adjust icon size for smaller screens */
-        height: 60px;
-    }
-    
-    .skill-item p {
-        font-size: 12px;
+    to {
+        opacity: 1;
     }
 }
 
-@media (max-width: 768px) {
-    .skill-item {
-        width: 100px; /* Adjust width for smaller screens */
-        padding: 10px;
+@keyframes iconBounce {
+    0%, 100% {
+        transform: scale(1);
     }
-    
-    .skill-icon {
-        width: 60px; /* Adjust icon size for smaller screens */
-        height: 60px;
-    }
-    
-    .skill-item p {
-        font-size: 12px;
+    50% {
+        transform: scale(1.2);
     }
 }
-@media (max-width: 768px) {
-    .skill-item {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .skill-icon {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .skill-item p {
-        font-size: 12px;
-    }
-}
+
 
 
 
