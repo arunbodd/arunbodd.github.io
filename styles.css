@@ -1,9 +1,13 @@
+
+
 /* Import the Maths Sans Bold font */
+/* Include Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maths+Sans:wght@700&display=swap');
 
-/* Apply Maths Sans Bold font to all headings */
+/* Apply Bungee Tint font to all headings */
 section h1, section h2, section h3, section h4, section h5, section h6 {
-    font-family: 'Maths Sans', sans-serif; /* Apply Maths Sans Bold font */
+    font-family: 'Bungee Tint', sans-serif; /* Apply Bungee Tint font */
 }
 
 /* Apply consistent padding and center alignment to all section headings */
@@ -35,6 +39,7 @@ section {
     margin: 30px auto;
     max-width: 1200px;
     transition: background-color 0.3s, box-shadow 0.3s;
+
 }
 
 section:hover {
@@ -58,7 +63,7 @@ section:hover li {
 
 /* Navbar Styles */
 .navbar {
-    margin-bottom: 0;
+    margin-bottom: 200px;
     box-shadow: 0 2px 4px rgba(241, 241, 239, 0.1);
     z-index: 1000;
     transition: background-color 0.3s, color 0.3s;
@@ -161,7 +166,7 @@ section:hover li {
     bottom: -2px; /* Adjust as needed */
     width: 100%;
     height: 2px; /* Adjust as needed */
-    background-color: #00bcd4; /* Underline color */
+    background-color: #4ed3a7; /* Underline color */
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
@@ -190,8 +195,6 @@ section:hover li {
     opacity: 1;
     transform: translateY(0); /* Final position */
 }
-
-/* Main Content */
 /* Main Content */
 main.container {
     padding: 0 15px;
@@ -274,6 +277,86 @@ main.container {
     }
 }
 
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
 #experience {
     padding: 30px 15px;
     background-color: #f9f9f9;
@@ -335,10 +418,9 @@ ul li {
         font-size: 0.9rem;
     }
 }
-
-
 /* Education Section */
 .education-section {
+    margin-top: 100px;
     background-color: #f8f9fa; /* Light background for contrast */
     padding: 50px 0;
 }
@@ -370,6 +452,9 @@ ul li {
     margin-bottom: 20px;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between logo and text */
 }
 
 .education-item:hover {
@@ -387,6 +472,11 @@ ul li {
     background: #007bff; /* Accent color */
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+
+.education-logo {
+    width: 80px; /* Adjust as needed */
+    height: auto;
 }
 
 .degree-title {
@@ -415,6 +505,13 @@ ul li {
     
     .education-item {
         padding: 15px;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start;
+        gap: 15px; /* Adjust spacing for smaller screens */
+    }
+    
+    .education-logo {
+        width: 60px; /* Adjust as needed for smaller screens */
     }
     
     .degree-title {
@@ -428,19 +525,278 @@ ul li {
     .location {
         font-size: 0.9rem;
     }
-
+}
+/* General Skills Section Styles */
+#skills {
+    margin-top:100px;
+    padding: 30px;
+    background-color: #f7f9fc; /* Very light grey background for better contrast */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    overflow: hidden; /* Ensure contents don't overflow */
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Banner Styles */
+.banners-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* General Banner Styles */
+.banner {
+    width: 200px;
+    height: 300px;
+    background-color: #f2f4f7; /* Light grey color */
+    clip-path: polygon(
+        0% 0%, 
+        100% 0%, 
+        100% 100%, 
+        50% 80%, 
+        0% 100%
+    );
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added shadow and color transitions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    background-color: #e6e9ef; /* Slightly darker grey on hover */
+}
+
+.banner-1 { background-color: #fce8e8; } /* Light pink */
+.banner-2 { background-color: #fcf8e8; } /* Light yellow */
+.banner-3 { background-color: #e8fce8; } /* Light green */
+.banner-4 { background-color: #e8e8fc; } /* Light blue */
+.banner-5 { background-color: #fce8f9; } /* Light lavender */
+
+.banner-text {
+    position: absolute;
+    bottom: 50%; /* Positioning text in the vertical center */
+    left: 50%;   /* Center horizontally */
+    transform: translate(-50%, 50%); /* Offset for accurate centering */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for gloss effect */
+    color: #333; /* Darker text color for better readability */
+    padding: 10px 15px; /* Padding around the text */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 90%; /* Ensure text doesn't overflow */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards; /* Fade in animation */
+}
+
+/* Skills Overlay Styles */
+.skills-overlay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.all-skills {
+    display: none;
+    width: 108%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Skill Item Styles */
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    margin: 10px; /* Consistent margin for spacing */
+    width: 150px; /* Fixed width for consistency */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ccc; /* Border for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    overflow: hidden; /* Hide overflow text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for skill items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added transitions */
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards; /* Fade in animation */
+}
+
+.skill-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    background-color: #f9f9f9; /* Slightly lighter background on hover */
+}
+
+.skill-item:hover .skill-icon {
+    animation: iconBounce 0.6s ease; /* Bounce effect for icon */
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease; /* Animation for icon */
+    transform: rotate(0deg); /* Initial rotation */
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1) rotate(15deg); /* Slightly enlarge and rotate icon on hover */
+}
+
+.skill-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
+}
+
+/* Biomedical Skills Banner Specific Styles */
+.biomedical-skills {
+    width: 250px;
+    height: 350px;
+    background-color: #e3f2fd; /* Light blue background for distinction */
+    clip-path: polygon(
+        0% 0%, 
+        100% 0%, 
+        100% 100%, 
+        50% 85%, 
+        0% 100%
+    );
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.biomedical-skills:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.biomedical-skills .skill-item {
+    width: 200px;
+    height: auto; /* Auto height to accommodate longer text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Border for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for skill items */
+}
+
+.biomedical-skills .skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Animation for icon */
+}
+
+.biomedical-skills .skill-item:hover .skill-icon {
+    transform: scale(1.1) rotate(-15deg); /* Slightly enlarge and rotate icon on hover */
+}
+
+.biomedical-skills .skill-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
+}
+
+/* Machine Learning Skills Section Styles */
+.machine-learning-skills .skill-item {
+    width: 150px; /* Fixed width for consistency */
+    height: auto; /* Auto height to accommodate longer text */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ccc; /* Border for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensure long words wrap within the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for skill items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for shadow and scale */
+}
+
+.machine-learning-skills .skill-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Hover Effects for Banners and Skills */
+[data-skill="1"]:hover ~ .skills-overlay [data-skill="1"],
+[data-skill="2"]:hover ~ .skills-overlay [data-skill="2"],
+[data-skill="3"]:hover ~ .skills-overlay [data-skill="3"],
+[data-skill="4"]:hover ~ .skills-overlay [data-skill="4"],
+[data-skill="5"]:hover ~ .skills-overlay [data-skill="5"] {
+    display: flex; /* Show skills when hovering over the respective banner */
+}
+
+[data-skill]:not(:hover) ~ .skills-overlay [data-skill] {
+    display: none; /* Hide skills when not hovering */
+}
+
+/* Keyframes for Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes iconBounce {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(15deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
 
 
 /* Strengths Section */
 .strengths {
-    padding: 20px;
+    margin-top: 10px; /* Adjust this value if necessary */
+    padding: 100px;
     background-color: #f9f9f9;
 }
 
 .strengths h1 {
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 30px;
     font-size: 2rem;
     color: #333;
@@ -448,8 +804,8 @@ ul li {
 
 .strengths-container ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -464,12 +820,12 @@ ul li {
 .strength-item {
     position: relative;
     width: 200px;
-    height: 100px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
     font-size: 1.2rem;
     text-align: center;
@@ -538,9 +894,6 @@ ul li {
     background-color: #e91e63; /* Pink */
 }
 
-
-
-
 /* Publication card styling */
 .publications {
     padding: 30px 15px;
@@ -581,14 +934,20 @@ ul li {
 }
 
 
+/* Main content area takes up remaining space */
+.main-content {
+    flex: 1;
+}
+
 /* Footer Container */
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem; /* Adjust padding as needed */
+    padding: 2rem; /* Adjust padding as needed */
     background-color: #333; /* Background color for footer */
+    color: #fff; /* Default text color for footer */
 }
 
 /* Social Links Container */
@@ -611,7 +970,7 @@ ul li {
 
 /* Specific color for each social icon */
 .social-icon.linkedin {
-    color: #0a66c2; /* LinkedIn default color */
+    color: #d4dee8; /* LinkedIn default color */
 }
 
 .social-icon.linkedin:hover {
@@ -631,7 +990,7 @@ ul li {
 }
 
 .social-icon.google-scholar:hover {
-    color: #ea4335; /* Google Scholar hover color */
+    color: #a8645e; /* Google Scholar hover color */
 }
 
 /* Copyright Text */
@@ -641,53 +1000,6 @@ ul li {
     margin: 0; /* Remove default margin */
 }
 
-/* Footer Container */
-.footer-container {
-    padding: 2rem;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-/* Social Links Container */
-.social-links {
-    margin-bottom: 1rem;
-}
-
-.social-icon {
-    color: #fff;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-    margin: 0 10px; /* Space between icons */
-}
-
-.social-icon:hover {
-    color: #4493d8; /* General hover color */
-}
-
-/* Specific Icon Hover Colors */
-.social-icon.linkedin:hover {
-    color: #0077b5; /* LinkedIn hover color */
-}
-
-.social-icon.github:hover {
-    color: #fff; /* Brighter white for GitHub */
-}
-
-.social-icon.google-scholar:hover {
-    color: #4285f4; /* Google Scholar hover color */
-}
-
-/* Footer Link Style */
-.footer-link {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-link:hover {
-    color: #4493d8; /* Hover color */
-}
 
 /* Modal Background Overlay */
 #easter-egg-modal {
@@ -767,54 +1079,33 @@ ul li {
 }
 
 
-
-/* Back-to-top Button */
-.back-to-top {
+/* Back to Top Button */
+#back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #50df98;
+    bottom: 30px; /* Adjust this value for the button's vertical position */
+    right: 30px; /* Adjust this value for the button's horizontal position */
+    width: 50px;
+    height: 50px;
+    background-color: #007BFF; /* Change this color as needed */
     color: #fff;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
     cursor: pointer;
-    transition: opacity 0.3s, transform 0.3s;
-    opacity: 0.5; /* Initial state for visibility */
-    visibility: hidden; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.back-to-top:hover {
-    background-color: #d560cb;
+#back-to-top.show {
     opacity: 1;
-    transform: scale(1.1); /* Slightly enlarges the button */
+    visibility: visible;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .footer-icons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
+#back-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
