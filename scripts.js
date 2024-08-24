@@ -1,15 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Back to Top Button
-    const backToTopButton = document.getElementById('back-to-top');
-    if (backToTopButton) {
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
 
  
 
