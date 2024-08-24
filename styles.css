@@ -945,7 +945,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem; /* Adjust padding as needed */
+    padding: 0rem; /* Adjust padding as needed */
     background-color: #333; /* Background color for footer */
     color: #fff; /* Default text color for footer */
 }
@@ -1079,33 +1079,4 @@ h1 {
 }
 
 
-/* Back to Top Button */
-#back-to-top {
-    position: fixed;
-    bottom: 30px; /* Adjust this value for the button's vertical position */
-    right: 30px; /* Adjust this value for the button's horizontal position */
-    width: 50px;
-    height: 50px;
-    background-color: #007BFF; /* Change this color as needed */
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
 
-#back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#back-to-top:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
