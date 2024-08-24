@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#flipbook-container {
+    position: relative;
+    perspective: 1200px;
+}
+
+#flipbook {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 1s;
+}
+
+.df-book-page {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.df-page-front,
+.df-page-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.df-page-front {
+    background-color: white;
+    z-index: 2;
+}
+
+.df-page-back {
+    background-color: lightgray;
+    z-index: 1;
+    transform: rotateY(-180deg);
+}
+
+.df-left-side {
+    left: 0;
+}
+
+.df-right-side {
+    left: 50%;
+}
+
+.df-hard-page .df-page-front,
+.df-hard-page .df-page-back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.df-page-front:before,
+.df-page-back:before {
+    width: 20%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.df-page-front:before {
+    right: 0;
+}
+
+.df-book-page.df-flipping,
+.df-book-page.df-folding {
+    z-index: 200 !important;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    z-index: 6;
+}
+
+.nav-button:hover {
+    opacity: 1;
+}
+
+#prev {
+    left: -50px;
+}
+
+#next {
+    right: -50px;
+}
