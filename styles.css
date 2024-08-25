@@ -1148,7 +1148,7 @@ h1 {
 }
 /* Social Icons */
 .social-icon {
-    font-size: 3rem; /* Larger icons */
+    font-size: 1.5rem; /* Larger icons */
     color: #0c0b0b; /* Neutral color */
     transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
