@@ -1,14 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-/* Import the Maths Sans Bold font */
-/* Include Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Maths+Sans:wght@700&display=swap');
 
-/* Apply Bungee Tint font to all headings */
+/* Apply Montserrat font to all headings */
 section h1, section h2, section h3, section h4, section h5, section h6 {
-    font-family: 'Bungee Tint', sans-serif; /* Apply Bungee Tint font */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
+
 
 /* Apply consistent padding and center alignment to all section headings */
 section h1 {
@@ -25,7 +23,7 @@ section h1::after {
     display: block;
     width: 60px;
     height: 4px;
-    background: #007bff; /* Accent color */
+    background: #a5c3e2; /* Accent color */
     margin: 10px auto 0; /* Center-align underline */
     border-radius: 2px;
 }
@@ -33,11 +31,11 @@ section h1::after {
 /* Ensure consistent padding for all sections */
 section {
     background-color: #ffffff;
-    padding: 30px; /* Uniform padding */
+    padding: 50px; /* Uniform padding */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 30px auto;
-    max-width: 1200px;
+    margin: auto;
+    max-width: auto;
     transition: background-color 0.3s, box-shadow 0.3s;
 
 }
@@ -63,17 +61,34 @@ section:hover li {
 
 /* Navbar Styles */
 .navbar {
-    margin-bottom: 200px;
     box-shadow: 0 2px 4px rgba(241, 241, 239, 0.1);
     z-index: 1000;
-    transition: background-color 0.3s, color 0.3s;
-    background-color: rgba(0, 0, 0, 0.8); /* Default semi-transparent background color */
+    transition: background-color 0.3s, color 0.3s, padding 0.3s; /* Added padding transition */
+    background-color: rgba(200, 150, 150, 0.8); /* Updated background color */
     color: #ffffff; /* Default text color */
+    padding: 2px 10px; /* Reduced padding */
+    height: 60px; /* Reduced height */
+    line-height: 40px; /* Center text vertically */
+    display: flex; /* Use flexbox for vertical alignment */
+    align-items: center; /* Center content vertically */
+    width: 100%; /* Full width of the viewport */
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+}
+
+/* Container inside the navbar */
+.navbar-container {
+    max-width: 1000px; /* Maximum width for content */
+    margin: 0 auto; /* Center horizontally within the viewport */
+    width: 100%; /* Full width within the maximum constraint */
 }
 
 /* Minimized Navbar Styles */
 .navbar.minimized {
-    padding: 5px 10px; /* Reduced padding */
+    padding: 3px 8px; /* Further reduced padding */
     background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
     transition: padding 0.3s, background-color 0.3s; /* Smooth transition */
 }
@@ -87,32 +102,32 @@ section:hover li {
 /* Navbar Brand Styling */
 .navbar-brand {
     position: relative; /* For positioning the emoji */
-    display: inline-block; /* Ensure the brand name fits the animation */
-    padding: 10px 15px; /* Space for the animation */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+    padding: 5px 10px; /* Reduced padding */
     text-decoration: none; /* Ensure no underline */
-    color: inherit; /* Inherit color from navbar */
+    color: whitesmoke; /* Inherit color from navbar */
     transition: color 0.3s, opacity 0.3s; /* Smooth transition for color and opacity */
 }
 
 /* Minimized Navbar Brand Styles */
 .navbar.minimized .navbar-brand {
-    font-size: 1rem; /* Smaller font size */
-    padding: 5px 10px; /* Adjust padding */
+    font-size: 0.9rem; /* Smaller font size */
 }
 
 /* Navbar Brand when scrolled */
 .navbar-brand.scrolled {
-    color: #333; /* Color when scrolled */
-    opacity: 0.8; /* Slightly faded effect when scrolled */
+    color: #f3d4d4; /* Color when scrolled */
+    opacity: 1; /* Slightly faded effect when scrolled */
 }
 
 /* Brand Name Styling */
 .brand-name {
-    color: inherit; /* Inherit color from navbar */
+    color: whitesmoke; 
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced font size */
+    opacity: 1;
     transition: opacity 0.4s; /* Smooth transition for opacity */
-    display: inline; /* Ensure it stays inline with the emoji */
 }
 
 /* DNA Emoji Styling */
@@ -121,9 +136,9 @@ section:hover li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
-    color: #00ffcc;
-    transition: opacity 0.4s; /* Smooth transition for opacity */
+    font-size: 1.2rem; /* Reduced font size */
+    color: #ffffff;
+    transition: opacity 0.5s; /* Smooth transition for opacity */
     opacity: 0; /* Initially hidden */
     z-index: 1; /* Ensure it’s above the text */
 }
@@ -139,17 +154,17 @@ section:hover li {
 /* Navbar Link Styles */
 .navbar-nav .nav-link {
     position: relative; /* For positioning the underline effect */
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduced padding */
     color: inherit; /* Inherit color from navbar */
     text-decoration: none; /* Remove default underline */
-    font-size: 1rem; /* Adjust font size */
+    font-size: 0.9rem; /* Smaller font size */
     transition: color 0.3s, opacity 0.3s; /* Smooth transition for text color and opacity */
 }
 
 /* Minimized Navbar Link Styles */
 .navbar.minimized .nav-link {
-    font-size: 0.9rem; /* Smaller font size */
-    color: #333; /* Text color when minimized */
+    font-size: 0.8rem; /* Further reduced font size */
+    color: #f6e5e5; /* Text color when minimized */
 }
 
 /* Navbar Link Hover and Focus Styles */
@@ -163,9 +178,9 @@ section:hover li {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px; /* Adjust as needed */
+    bottom: -1px; /* Adjusted for reduced size */
     width: 100%;
-    height: 2px; /* Adjust as needed */
+    height: 1px; /* Adjusted for reduced size */
     background-color: #4ed3a7; /* Underline color */
     transform: scaleX(0);
     transform-origin: bottom right;
@@ -195,6 +210,7 @@ section:hover li {
     opacity: 1;
     transform: translateY(0); /* Final position */
 }
+
 /* Main Content */
 main.container {
     padding: 0 15px;
@@ -256,7 +272,6 @@ main.container {
     color: #333;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .card-body h1 {
         font-size: 20px;
@@ -265,15 +280,17 @@ main.container {
     .card-body p {
         font-size: 14px;
     }
-}
 
-@media (max-width: 480px) {
-    .profile-picture-container {
-        padding: 10px;
+    .content {
+        padding: 15px;
     }
 
-    .profile-picture {
-        transform: scale(1.05);
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
     }
 }
 
@@ -786,11 +803,10 @@ h1 {
     }
 }
 
-
 /* Strengths Section */
 .strengths {
-    margin-top: 10px; /* Adjust this value if necessary */
-    padding: 100px;
+    margin-top: auto; /* Adjust this value if necessary */
+    padding: auto;
     background-color: #f9f9f9;
 }
 
@@ -804,10 +820,10 @@ h1 {
 
 .strengths-container ul {
     list-style-type: none;
-    padding: 10px;
+    padding: auto;
     margin: 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
     justify-content: center;
 }
 
@@ -815,18 +831,21 @@ h1 {
     position: relative;
     margin: 10px;
     cursor: pointer;
+    flex: 0 0 45%; /* Set each item to take 45% of the width */
+    max-width: 45%; /* Ensures that only two items fit per row */
 }
 
+/* Strength Item Styles */
 .strength-item {
     position: relative;
-    width: 200px;
+    width: 100%; /* Set to 100% to fill li element */
     height: 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     overflow: hidden;
-    border-radius: 10px;
-    color: white;
+    border-radius: 2px;
+    color: rgb(18, 15, 15);
     font-size: 1.2rem;
     text-align: center;
     font-weight: bold;
@@ -844,7 +863,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(246, 242, 242, 0.6);
     transition: opacity 0.3s ease;
     opacity: 0;
 }
@@ -855,44 +874,46 @@ h1 {
 
 .strength-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(186, 182, 182, 0.15);
+    box-shadow: 0 6px 12px rgba(17, 2, 2, 0.15);
 }
 
+/* Background Colors for Strength Items */
 .strength-item:nth-child(1) {
-    background-color: #ff6f61; /* Coral */
+    background-color: #ffb3a2; /* Lighter Coral */
 }
 
 .strength-item:nth-child(2) {
-    background-color: #6a1b9a; /* Deep Purple */
+    background-color: #ba68c8; /* Lighter Deep Purple */
 }
 
 .strength-item:nth-child(3) {
-    background-color: #ffeb3b; /* Yellow */
+    background-color: #fff59d; /* Lighter Yellow */
 }
 
 .strength-item:nth-child(4) {
-    background-color: #4caf50; /* Green */
+    background-color: #a5d6a7; /* Lighter Green */
 }
 
 .strength-item:nth-child(5) {
-    background-color: #2196f3; /* Blue */
+    background-color: #90caf9; /* Lighter Blue */
 }
 
 .strength-item:nth-child(6) {
-    background-color: #ff5722; /* Deep Orange */
+    background-color: #ff8a65; /* Lighter Deep Orange */
 }
 
 .strength-item:nth-child(7) {
-    background-color: #009688; /* Teal */
+    background-color: #80cbc4; /* Lighter Teal */
 }
 
 .strength-item:nth-child(8) {
-    background-color: #3f51b5; /* Indigo */
+    background-color: #9fa8da; /* Lighter Indigo */
 }
 
 .strength-item:nth-child(9) {
-    background-color: #e91e63; /* Pink */
+    background-color: #f48fb1; /* Lighter Pink */
 }
+
 
 /* Publication card styling */
 .publications {
@@ -938,16 +959,16 @@ h1 {
 .main-content {
     flex: 1;
 }
-
 /* Footer Container */
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0rem; /* Adjust padding as needed */
-    background-color: #333; /* Background color for footer */
-    color: #fff; /* Default text color for footer */
+    width: 100%; /* Make footer full device width */
+    padding: 1rem 0; /* Adjust padding for top and bottom */
+    background-color: #000000; /* Background color for footer */
+    color: #ebe4e4; /* Default text color for footer */
 }
 
 /* Social Links Container */
@@ -959,7 +980,7 @@ h1 {
 
 /* Style for social icons */
 .social-icon {
-    color: #fff; /* Default color for icons */
+    color: #fbf3f3; /* Default color for icons */
     font-size: 1.5rem; /* Adjust icon size as needed */
     transition: color 0.3s; /* Smooth transition for hover effect */
 }
@@ -978,11 +999,11 @@ h1 {
 }
 
 .social-icon.github {
-    color: #9e9b9b; /* GitHub default color */
+    color: #ffffff; /* GitHub default color */
 }
 
 .social-icon.github:hover {
-    color: #fff; /* GitHub hover color */
+    color: #e0e0e0; /* Slightly darker shade of white for hover effect */
 }
 
 .social-icon.google-scholar {
@@ -999,6 +1020,7 @@ h1 {
     font-size: 0.875rem; /* Adjust font size as needed */
     margin: 0; /* Remove default margin */
 }
+
 
 
 /* Modal Background Overlay */
@@ -1078,5 +1100,143 @@ h1 {
     display: none; /* Hide elements with this class */
 }
 
+/* Contact Page Container */
+.contact-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Center vertically */
+    padding: 2rem;
+    background-color: #8fe3de; /* Soft background color */
+    box-shadow: inset 0 0 10px rgba(246, 181, 181, 0.1);
+}
 
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px; /* Max width for better readability */
+    padding: 2rem;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Unique font for a bold look */
+}
 
+/* Brand Header */
+.brand-header {
+    margin-bottom: 2rem; /* Space between brand and social links */
+}
+
+.brand-name {
+    font-size: 3rem;
+    color: #333; /* Dark gray for contrast */
+}
+
+.dna-emoji {
+    font-size: 2.5rem;
+}
+
+/* Contact Text */
+.contact-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #444; /* Darker color for the text */
+}
+/* Social Icons */
+.social-icon {
+    font-size: 3rem; /* Larger icons */
+    color: #0c0b0b; /* Neutral color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* LinkedIn Icon */
+.social-icon.linkedin {
+    color: #a9b1eb; /* Default LinkedIn color */
+}
+
+.social-icon.linkedin:hover {
+    color: #0a66c2; /* LinkedIn hover color */
+}
+
+/* GitHub Icon */
+.social-icon.github {
+    color: #e3cdcd; /* Default GitHub color */
+}
+
+.social-icon.github:hover {
+    color: #3a3636; /* GitHub hover color */
+}
+
+/* Google Scholar Icon */
+.social-icon.google-scholar {
+    color: #f5865d; /* Default Google Scholar color */
+}
+
+.social-icon.google-scholar:hover {
+    color: #ea4335; /* Google Scholar hover color */
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem; /* Standard font size */
+    margin: 0.5rem 0;
+    color: #555; /* Dark gray for readability */
+}
+
+.contact-info a {
+    color: #0a66c2; /* Standard link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ff6f61; /* Hover color for links */
+}
+
+/* Copyright Text */
+.copyright p {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    margin: 0;
+    color: #777; /* Light gray for subtlety */
+}
+
+/* Easter Egg Link */
+.footer-link {
+    color: #0a66c2;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .brand-name {
+        font-size: 2.5rem;
+    }
+
+    .contact-text {
+        font-size: 1.5rem;
+    }
+
+    .social-icon {
+        font-size: 2rem;
+    }
+}
