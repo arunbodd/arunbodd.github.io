@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
  
- 
 
     // Scroll to Footer for Contact Link
     const contactLink = document.querySelector('.navbar-nav .nav-link[href="#footer"]');
@@ -73,15 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-       // Smooth Scroll for Anchor Links
-       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+       
     // Skills Section Functionality
     const banners = document.querySelectorAll('.banner');
     const skillSections = document.querySelectorAll('.all-skills');
