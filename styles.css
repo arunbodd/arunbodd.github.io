@@ -1142,7 +1142,7 @@ h1 {
 
 /* Contact Text */
 .contact-text {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
     color: #444; /* Darker color for the text */
 }
