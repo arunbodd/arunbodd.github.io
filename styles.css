@@ -1117,99 +1117,109 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 600px; /* Max width for better readability */
+    max-width: 600px;
     padding: 2rem;
-    background-color: #ffffff; /* Clean white background */
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Unique font for a bold look */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffffff; /* Default background color */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: contactContainerBgChange 15s linear infinite; /* Background color animation */
+    margin: 2rem auto; /* Center horizontally and add vertical margin */
 }
 
-/* Brand Header */
-.brand-header {
-    margin-bottom: 2rem; /* Space between brand and social links */
-}
-
-.brand-name {
-    font-size: 3rem;
-    color: #333; /* Dark gray for contrast */
-}
-
-.dna-emoji {
-    font-size: 2.5rem;
+/* Contact Container Hover Effect */
+.contact-container:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
 }
 
 /* Contact Text */
-.contact-text {
-    font-size: 4rem;
-    font-weight: 700;
-    color: #444; /* Darker color for the text */
+.contact-text0 {
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
+
+.contact-text {
+    font-size: 1.2rem; /* Reduced font size */
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 0.5rem; /* Reduced margin-bottom */
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem; /* Reduced bottom margin */
+}
+
 /* Social Icons */
 .social-icon {
-    font-size: 1.5rem; /* Larger icons */
-    color: #0c0b0b; /* Neutral color */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-size: 3rem;
+    color: #0c0b0b;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Zoom effect on hover */
+    transform: scale(1.2);
 }
 
-/* LinkedIn Icon */
 .social-icon.linkedin {
-    color: #a9b1eb; /* Default LinkedIn color */
+    color: #a9b1eb;
 }
 
 .social-icon.linkedin:hover {
-    color: #0a66c2; /* LinkedIn hover color */
+    color: #0a66c2;
 }
 
-/* GitHub Icon */
 .social-icon.github {
-    color: #e3cdcd; /* Default GitHub color */
+    color: #e3cdcd;
 }
 
 .social-icon.github:hover {
-    color: #3a3636; /* GitHub hover color */
+    color: #3a3636;
 }
 
-/* Google Scholar Icon */
 .social-icon.google-scholar {
-    color: #f5865d; /* Default Google Scholar color */
+    color: #f5865d;
 }
 
 .social-icon.google-scholar:hover {
-    color: #ea4335; /* Google Scholar hover color */
+    color: #ea4335;
 }
 
 /* Contact Info */
 .contact-info {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem; /* Reduced bottom margin */
 }
 
 .contact-info p {
-    font-size: 1.2rem; /* Standard font size */
+    font-size: 1.2rem;
     margin: 0.5rem 0;
-    color: #555; /* Dark gray for readability */
+    color: #555;
 }
 
 .contact-info a {
-    color: #0a66c2; /* Standard link color */
+    color: #0a66c2;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #ff6f61; /* Hover color for links */
+    color: #ff6f61;
 }
 
 /* Copyright Text */
 .copyright p {
-    font-size: 0.9rem; /* Slightly smaller font size */
+    font-size: 0.9rem;
     margin: 0;
-    color: #777; /* Light gray for subtlety */
+    color: #777;
 }
 
 /* Easter Egg Link */
@@ -1224,16 +1234,26 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .contact-container {
+    .unified-contact-section {
         padding: 1rem;
     }
 
-    .brand-name {
-        font-size: 2.5rem;
+    .scrolling-words-container {
+        font-size: 1.5rem;
+        margin: 0.5rem 0; /* Adjusted margin for smaller screens */
+    }
+
+    .contact-container {
+        padding: 1rem;
+        margin: 1rem auto; /* Adjusted margin for smaller screens */
+    }
+
+    .contact-text0 {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
     }
 
     .contact-text {
-        font-size: 1.5rem;
+        font-size: 1rem; /* Adjusted font size for smaller screens */
     }
 
     .social-icon {
