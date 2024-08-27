@@ -1140,14 +1140,14 @@ h1 {
 
 /* Contact Text */
 .contact-text0 {
-    font-size: 1.2rem; /* Increased font size */
+    font-size: 3rem; /* Increased font size */
     font-weight: bold;
     color: #333;
     margin-bottom: 0.5rem; /* Reduced margin-bottom */
 }
 
 .contact-text {
-    font-size: 2rem; /* Reduced font size */
+    font-size: 1rem; /* Reduced font size */
     font-weight: 700;
     color: #444;
     margin-bottom: 0.5rem; /* Reduced margin-bottom */
