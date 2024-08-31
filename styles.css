@@ -405,7 +405,7 @@ header {
 /* Style for social icons */
 .social-icon {
     color: #fbf3f3; /* Default color for icons */
-    font-size: 1.5rem; /* Adjust icon size as needed */
+    font-size: 1.2rem; /* Adjust icon size as needed */
     transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
