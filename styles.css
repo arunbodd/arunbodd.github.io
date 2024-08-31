@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
 /* Apply Montserrat font to all headings */
 section h1, section h2, section h3, section h4, section h5, section h6 {
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
-
-
 /* Apply consistent padding and center alignment to all section headings */
 section h1 {
     color: #070606;
@@ -448,11 +443,13 @@ ul li {
         font-size: 0.9rem;
     }
 }
+
 /* Education Section */
 .education-section {
     margin-top: 100px;
     background-color: #f8f9fa; /* Light background for contrast */
     padding: 50px 0;
+    animation: fadeIn 3s ease-in-out; /* Fade-in animation */
 }
 
 .education-section .section-title {
@@ -485,6 +482,7 @@ ul li {
     display: flex;
     align-items: center;
     gap: 20px; /* Space between logo and text */
+    animation: fadeIn 3.5s ease-in-out; /* Fade-in animation for education item */
 }
 
 .education-item:hover {
@@ -816,11 +814,13 @@ h1 {
     }
 }
 
+
 /* Strengths Section */
 .strengths {
     margin-top: auto; /* Adjust this value if necessary */
     padding: auto;
     background-color: #f9f9f9;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation for the entire section */
 }
 
 .strengths h1 {
@@ -926,11 +926,10 @@ h1 {
 .strength-item:nth-child(9) {
     background-color: #f48fb1; /* Lighter Pink */
 }
-
-
-/* Publication card styling */
+/* Publications Section */
 .publications {
     padding: 30px 15px;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation for the entire section */
 }
 
 .publications .publication-card {
@@ -1122,8 +1121,8 @@ h1 {
     padding: 2rem;
     background-color: #8fe3de; /* Soft background color */
     box-shadow: inset 0 0 10px rgba(246, 181, 181, 0.1);
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation for the entire section */
 }
-
 
 /* Contact Container */
 .contact-container {
@@ -1274,5 +1273,6 @@ h1 {
         font-size: 2rem;
     }
 }
+
 
 
