@@ -211,15 +211,27 @@ section:hover li {
     transform: translateY(0); /* Final position */
 }
 
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Main Content */
 main.container {
     padding: 0 15px;
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
 }
 
 #profile-card {
     display: grid;
     place-items: center;
     margin-top: 30px;
+    animation: fadeIn 1.5s ease-in-out; /* Apply fade-in animation */
 }
 
 .card {
@@ -231,6 +243,7 @@ main.container {
     overflow: hidden;
     display: grid;
     grid-template-rows: auto 1fr;
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
 }
 
 .card-header {
@@ -259,6 +272,7 @@ main.container {
     background-color: #ffffff;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
+    animation: fadeIn 2.5s ease-in-out; /* Apply fade-in animation */
 }
 
 .card-body h1 {
@@ -293,7 +307,6 @@ main.container {
         font-size: 0.9rem;
     }
 }
-
 
 body {
     font-family: Arial, sans-serif;
