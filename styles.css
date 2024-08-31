@@ -382,6 +382,84 @@ header {
     }
 }
 
+
+/*Experience Section */
+#experience {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #f0f4f8, #f9f9f9);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #00796b; /* Accent border */
+}
+
+#experience:hover {
+    background-color: #e0f7fa;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.content:hover {
+    border-color: #00796b; /* Accent border on hover */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.heading-colored {
+    color: #101111; /* Retained original color */
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
 #experience {
     padding: 30px 15px;
     background-color: #f9f9f9;
@@ -554,6 +632,10 @@ ul li {
         font-size: 0.9rem;
     }
 }
+
+
+
+
 /* General Skills Section Styles */
 #skills {
     margin-top:100px;
