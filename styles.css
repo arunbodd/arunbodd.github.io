@@ -383,6 +383,149 @@ header {
 }
 
 
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Make footer full device width */
+    padding: 1rem 0; /* Adjust padding for top and bottom */
+    background-color: #000000; /* Background color for footer */
+    color: #ebe4e4; /* Default text color for footer */
+}
+
+/* Social Links Container */
+.social-links {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-bottom: 0.5rem; /* Space below the icons */
+}
+
+/* Style for social icons */
+.social-icon {
+    color: #fbf3f3; /* Default color for icons */
+    font-size: 1.5rem; /* Adjust icon size as needed */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #4493d8; /* Default icon color on hover */
+}
+
+/* Specific color for each social icon */
+.social-icon.linkedin {
+    color: #d4dee8; /* LinkedIn default color */
+}
+
+.social-icon.linkedin:hover {
+    color: #0a66c2; /* LinkedIn hover color */
+}
+
+.social-icon.github {
+    color: #ffffff; /* GitHub default color */
+}
+
+.social-icon.github:hover {
+    color: #e0e0e0; /* Slightly darker shade of white for hover effect */
+}
+
+.social-icon.google-scholar {
+    color: #ea4335; /* Google Scholar default color */
+}
+
+.social-icon.google-scholar:hover {
+    color: #a8645e; /* Google Scholar hover color */
+}
+
+/* Copyright Text */
+.copyright p {
+    color: #fff; /* Sets the text color to white */
+    font-size: 0.875rem; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+
+
+/* Modal Background Overlay */
+#easter-egg-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Make sure it's on top */
+    overflow: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal Content */
+#easter-egg-content {
+    position: relative;
+    margin: 15% auto; /* Center the modal */
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 0.3s ease-out;
+}
+
+/* Modal Header */
+#easter-egg-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+/* Close Button */
+#easter-egg-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#easter-egg-content .close:hover {
+    color: #e74c3c; /* Color on hover */
+}
+
+/* Animation for Modal */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Optional: Adding Fade Effect */
+#easter-egg-modal.fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#easter-egg-modal.fade.in {
+    opacity: 1;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none; /* Hide elements with this class */
+}
+
+
+
 /*Experience Section */
 #experience {
     padding: 30px 20px;
@@ -1052,146 +1195,6 @@ h1 {
 /* Main content area takes up remaining space */
 .main-content {
     flex: 1;
-}
-/* Footer Container */
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Make footer full device width */
-    padding: 1rem 0; /* Adjust padding for top and bottom */
-    background-color: #000000; /* Background color for footer */
-    color: #ebe4e4; /* Default text color for footer */
-}
-
-/* Social Links Container */
-.social-links {
-    display: flex;
-    gap: 15px; /* Space between icons */
-    margin-bottom: 0.5rem; /* Space below the icons */
-}
-
-/* Style for social icons */
-.social-icon {
-    color: #fbf3f3; /* Default color for icons */
-    font-size: 1.5rem; /* Adjust icon size as needed */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-.social-icon:hover {
-    color: #4493d8; /* Default icon color on hover */
-}
-
-/* Specific color for each social icon */
-.social-icon.linkedin {
-    color: #d4dee8; /* LinkedIn default color */
-}
-
-.social-icon.linkedin:hover {
-    color: #0a66c2; /* LinkedIn hover color */
-}
-
-.social-icon.github {
-    color: #ffffff; /* GitHub default color */
-}
-
-.social-icon.github:hover {
-    color: #e0e0e0; /* Slightly darker shade of white for hover effect */
-}
-
-.social-icon.google-scholar {
-    color: #ea4335; /* Google Scholar default color */
-}
-
-.social-icon.google-scholar:hover {
-    color: #a8645e; /* Google Scholar hover color */
-}
-
-/* Copyright Text */
-.copyright p {
-    color: #fff; /* Sets the text color to white */
-    font-size: 0.875rem; /* Adjust font size as needed */
-    margin: 0; /* Remove default margin */
-}
-
-
-
-/* Modal Background Overlay */
-#easter-egg-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    z-index: 1000; /* Make sure it's on top */
-    overflow: auto;
-    transition: opacity 0.3s ease;
-}
-
-/* Modal Content */
-#easter-egg-content {
-    position: relative;
-    margin: 15% auto; /* Center the modal */
-    padding: 2rem;
-    width: 80%;
-    max-width: 500px;
-    background-color: #fff;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation: scaleIn 0.3s ease-out;
-}
-
-/* Modal Header */
-#easter-egg-content h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    color: #444;
-}
-
-/* Close Button */
-#easter-egg-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-#easter-egg-content .close:hover {
-    color: #e74c3c; /* Color on hover */
-}
-
-/* Animation for Modal */
-@keyframes scaleIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Optional: Adding Fade Effect */
-#easter-egg-modal.fade {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#easter-egg-modal.fade.in {
-    opacity: 1;
-}
-
-/* Hidden Class */
-.hidden {
-    display: none; /* Hide elements with this class */
 }
 
 /* Contact Page Container */
